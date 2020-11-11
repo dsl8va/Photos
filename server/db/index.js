@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-const photoScehma = new mongoose.Schema(
+const listingsSchema = new mongoose.Schema(
   {
     image: {
       type: String,
@@ -8,3 +8,24 @@ const photoScehma = new mongoose.Schema(
     }
   }
 )
+
+
+// Listings Collection
+// [
+//   {
+//     "address": String,
+//     "price": Number,
+//     "beds": Number,
+//     "baths": Number,
+//     "photos": [
+//       {
+//         "url": String,
+//         "description": String
+//       },
+//       {
+//         "url": String,
+//         "description": String
+//       }
+//     ]
+//   }
+// ]
