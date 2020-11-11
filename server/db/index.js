@@ -1,14 +1,34 @@
 var mongoose = require('mongoose');
 
-const listingsSchema = new mongoose.Schema(
-  {
-    image: {
-      type: String,
-      required: true
-    }
-  }
-)
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect('mongodb://localhost/FEC_photos');
 
+const db = mongoose.connection;
+db.once('open', () => console.log('Connected to database!'));
+
+const PhotosSchema = new mongoose.Schema({
+  url: String
+});
+
+const ListingsSchema = new mongoose.Schema({
+    address: {
+      type: String,
+      unique: true,
+    },
+    price: Number,
+    beds: Number,
+    baths: Number,
+    photos: [PhotosSchema]
+});
+
+const Listings = mongoose.model('listings', ListingsSchema);
+
+module.exports = {
+  Listings,
+  db
+}
 
 // Listings Collection
 // [
@@ -16,16 +36,7 @@ const listingsSchema = new mongoose.Schema(
 //     "address": String,
 //     "price": Number,
 //     "beds": Number,
-//     "baths": Number,
-//     "photos": [
-//       {
-//         "url": String,
-//         "description": String
-//       },
-//       {
-//         "url": String,
-//         "description": String
-//       }
-//     ]
+//     "baths": Number
+//     "photos": Array
 //   }
 // ]
