@@ -9,7 +9,8 @@
   "scripts": {
     "client-dev": "webpack --watch",
     "server-dev": "nodemon ./server/index.js",
-    "seed": "node server/db/seed.js"
+    "seed": "node server/db/seed.js",
+    "test": "mocha"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -24,8 +25,11 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
+    "assert": "^2.0.0",
     "babel-loader": "^8.2.1",
+    "chai": "^4.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
