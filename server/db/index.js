@@ -6,7 +6,7 @@ mongoose.set('useUnifiedTopology', true);
 mongoose.connect('mongodb://localhost/FEC_photos');
 
 const db = mongoose.connection;
-db.once('open', () => console.log('Connected to database!'));
+db.once('open', () => console.log('Connected to listings database!'));
 
 const PhotosSchema = new mongoose.Schema({
   url: String
@@ -29,14 +29,3 @@ module.exports = {
   Listings,
   db
 }
-
-// Listings Collection
-// [
-//   {
-//     "address": String,
-//     "price": Number,
-//     "beds": Number,
-//     "baths": Number
-//     "photos": Array
-//   }
-// ]

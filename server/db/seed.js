@@ -9,6 +9,7 @@ var listing1 = new Listings({
   photos: [{url:'photo1'}, {url:'photo2'}, {url:'photo3'}]
 })
 listing1.save();
+
 var listing2 = new Listings({
   address: '5678 E Pretend St',
   price: 800000,
