@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const db = require('./db/index.js');
 
@@ -8,10 +8,12 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/client/dist'))
 
-app.get('/api/listings/:id', (req, res) => {
-  db.Listings.find()
-    .then(listings => {
-      res.send(listings);
+app.get('/api/listings', (req, res) => {
+  db.Listings.findOne({
+    id: req.body.id
+  })
+    .then(listing => {
+      res.send(listing);
     })
     .catch(err => {
       console.log(err);

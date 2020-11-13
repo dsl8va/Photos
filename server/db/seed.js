@@ -4,7 +4,7 @@ const data = require('./photoData.js');
 
 
 // seeding database
-for (var i = 0; i < 100; i++) {
+for (var i = 1; i <= 100; i++) {
   var house = data.houses[Math.floor(Math.random() * data.houses.length)];
   var bedroom1 = data.bedrooms[Math.floor(Math.random() * data.bedrooms.length)];
   var bedroom2 = data.bedrooms[Math.floor(Math.random() * data.bedrooms.length)];
