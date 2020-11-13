@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/client/dist'))
 
-app.get('/api/listings', (req, res) => {
+app.get('/api/listings/:id', (req, res) => {
   db.Listings.find()
     .then(listings => {
       res.send(listings);
@@ -21,3 +21,5 @@ app.get('/api/listings', (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 })
+
+module.exports = app;

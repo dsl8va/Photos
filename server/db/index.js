@@ -8,19 +8,16 @@ mongoose.connect('mongodb://localhost/FEC_photos');
 const db = mongoose.connection;
 db.once('open', () => console.log('Connected to listings database!'));
 
-const PhotosSchema = new mongoose.Schema({
-  url: String
-});
-
 const ListingsSchema = new mongoose.Schema({
-    address: {
-      type: String,
-      unique: true,
+    id: {
+      type: Number,
+      unique: true
     },
+    address: String,
     price: Number,
     beds: Number,
     baths: Number,
-    photos: [PhotosSchema]
+    photos: Array
 });
 
 const Listings = mongoose.model('listings', ListingsSchema);
