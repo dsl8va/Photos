@@ -20,7 +20,7 @@ beforeAll(async (done) => {
 
 describe('Test /api/listings path', () => {
   it('should respond to GET method', async (done) => {
-    const response = await request.get('/api/listings');
+    const response = await request.get('/api/listings/1');
     expect(response.statusCode).toBe(200);
     done();
   });
