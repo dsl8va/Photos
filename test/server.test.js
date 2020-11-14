@@ -23,7 +23,7 @@ describe('Test /api/listings path', () => {
     const response = await request.get('/api/listings/1');
     expect(response.statusCode).toBe(200);
     done();
-  });
+  });j
 });
 
 afterAll(async (done) => {
