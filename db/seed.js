@@ -17,7 +17,7 @@ for (var i = 1; i <= 100; i++) {
     price: Math.floor(faker.random.number({min: 300000, max: 1500000})/100000) * 100000,
     beds: faker.random.number({min: 2, max: 4}),
     baths: faker.random.number({min: 2, max: 3}),
-    photos: [house, bedroom1, bedroom2, kitchen, livingRoom]
+    photos: [house, house, bedroom1, bedroom1, bedroom2, bedroom2, kitchen, kitchen, livingRoom, livingRoom]
   }
   var newListing = new Listings(options);
   newListing.save();

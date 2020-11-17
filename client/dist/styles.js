@@ -9,6 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   border-radius: 10px;
   position: relative;
+  font-family: TruliaSansBold;
 `;
 
 export const Grid = styled.div`
