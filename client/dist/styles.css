@@ -1,0 +1,19 @@
+html, body {
+  font-family: TruliaSans, system, -apple-system, Roboto, "Segoe UI Bold", Arial, sans-serif;
+}
+
+.icon {
+  color: rgb(0, 120, 130);
+  font-size: 20px;
+  position: relative;
+  top: 7px;
+  left: 0;
+  padding: 3px 7px 3px 5px;
+}
+
+.image-icon {
+  position: relative;
+  top: 5px;
+  left: 0;
+  padding: 3px 7px 3px 2px;
+}
