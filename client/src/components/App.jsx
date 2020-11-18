@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+
 import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
 import {Container, Grid, ForSale, ButtonsLayout, Save, Share, NumberOfPhotos, Image1Style, Image2Style, Image3Style, HeartStyle} from '../../dist/styles.js';
+
+import FirstModal from './Modal1.jsx';
 
 // ********** Style Components with Props ********** //
 const Image1 = styled.div`${Image1Style}`;
@@ -14,6 +17,7 @@ const Image3 = styled.div`${Image3Style}`;
 
 const App = () => {
   const [listing, setListing] = useState({});
+  const [modal1IsOpen, setModal1IsOpen] = useState(false);
 
   useEffect(() => {
     fetchListing()
@@ -30,9 +34,9 @@ const App = () => {
   }
 
   return (
+    <>
     <Container>
-
-      <Grid>
+      <Grid onClick={() => setModal1IsOpen(true)}>
         <Image1 photo={listing.photos ? listing.photos[0] : null}>
         </Image1>
         <Image2 photo={listing.photos ? listing.photos[2] : null}>
@@ -47,8 +51,10 @@ const App = () => {
         <Share><FiShare className="icon"/>Share</Share>
       </ButtonsLayout>
       <NumberOfPhotos><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</NumberOfPhotos>
-
     </Container>
+
+    <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing}/>
+    </>
   )
 }
 

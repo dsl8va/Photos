@@ -17,7 +17,7 @@ app.get('/api/listings/:id', async (req, res) => {
       res.status(200).send(listing);
     })
     .catch(err => {
-      console.error(err);
+      // console.error(err);
       res.status(404).send(err);
     })
 })
