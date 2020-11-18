@@ -143,7 +143,9 @@ export const Modal1 = styled.div`
   zIndex: 1000;
   border-radius: 10px;
   display: grid;
-  grid-template: 65px 35px 1fr / 2fr 1fr
+  grid-template: 60px 35px 1fr / 2fr 350px;
+  font-family: TruliaSansBold;
+  color: rgb(59, 65, 68);
 `;
 
 export const Overlay = styled.div`
@@ -159,66 +161,91 @@ export const Overlay = styled.div`
 // ********** Tabs ********** //
 
 export const Tabs = styled.div`
-  border: 1px solid black;
   grid-row: 1;
   grid-column: 1;
-  height: 65px;
-  white-space: nowrap;
+  height: 60px;
+  white-space: nowrap;s
   overflow-x: auto;
 `;
 
 export const PhotosTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  border: 1px solid rgb(232, 233, 234);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  margin-right: 2px;
   display: inline-block;
+  color: rgb(0, 120, 130);
 `;
 
 export const MapTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 10px 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 
 export const StreetViewTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 
 export const SchoolsTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 
 export const CrimeTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 export const CommuteTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 
 export const ShopEatTab = styled.div`
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 10px 20px;
+  margin: 2px;
   display: inline-block;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgb(232, 233, 234);
+  }
 `;
 
 // ********** Top Right Button Area ********** //
 
 export const Modal1ButtonsArea = styled.div`
-  border: 1px solid black;
   grid-row: 1;
   grid-column: 2;
   text-align: right;
@@ -233,84 +260,113 @@ export const ModalShare = styled(Share)`
 `;
 
 export const CloseButton = styled.div`
-  border: 1px solid black;
   padding: 5px;
   margin-right: 12px;
   display: inline-block;
 
   &:hover {
-    color: blue;
+    color: rgb(0, 120, 130);
   }
 `;
 
 // ********** House Information ********** //
 
-export const HouseInfo = styled.div`
-  border: 1px solid black;
+export const HouseInfoArea = styled.div`
+  border-top: 1px solid rgb(232, 233, 234);
   grid-row: 2;
   grid-column: 1 / 3;
+  `;
+
+export const HouseInfo = styled.div`
+  position: relative;
+  top: 7px;
+  left: 8px;
+  font-size: 15px;
 `;
 
 // ********** Gallery of House Photos ********** //
 
 export const HousePictures = styled.div`
-  border: 1px solid black;
+  border-radius: 12px;
+  margin: 0px 7px 7px 7px;
   grid-row: 3;
   grid-column: 1;
   display: grid;
   grid-template: repeat(5, 200px) / repeat(6, 1fr);
   overflow-y: auto;
+  gap: 7px;
 `;
 
 export const HouseImage1 = styled.div`
-  border: 1px solid black;
   grid-row: 1;
   grid-column: 1 / 4;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
 `;
 export const HouseImage2 = styled.div`
-  border: 1px solid black;
   grid-row: 1;
   grid-column: 4 / 7;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage3 = styled.div`
-  border: 1px solid black;
   grid-row: 2;
   grid-column: 1 / 3;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage4 = styled.div`
-  border: 1px solid black;
   grid-row: 2;
   grid-column: 3 / 5;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage5 = styled.div`
-  border: 1px solid black;
   grid-row: 2;
   grid-column: 5 / 7;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage6 = styled.div`
-  border: 1px solid black;
   grid-row: 3;
   grid-column: 1 / 7;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage7 = styled.div`
-  border: 1px solid black;
   grid-row: 4;
   grid-column: 1 / 3;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage8 = styled.div`
-  border: 1px solid black;
   grid-row: 4;
   grid-column: 3 / 5;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage9 = styled.div`
-  border: 1px solid black;
   grid-row: 4;
   grid-column: 5 / 7;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 export const HouseImage10 = styled.div`
-  border: 1px solid black;
   grid-row: 6;
   grid-column: 1 / 7;
+  background: url(${props => props.photo});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 
 // ********** Schedule a Tour Area ********** //
