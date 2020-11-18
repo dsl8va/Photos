@@ -6,7 +6,7 @@ import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
 import {Container, Grid, ForSale, ButtonsLayout, Save, Share, NumberOfPhotos, Image1Style, Image2Style, Image3Style, HeartStyle} from '../../dist/styles.js';
 
-import Modal1 from './Modal1.jsx';
+import FirstModal from './Modal1.jsx';
 
 // ********** Style Components with Props ********** //
 const Image1 = styled.div`${Image1Style}`;
@@ -36,7 +36,6 @@ const App = () => {
   return (
     <>
     <Container>
-
       <Grid onClick={() => setModal1IsOpen(true)}>
         <Image1 photo={listing.photos ? listing.photos[0] : null}>
         </Image1>
@@ -52,9 +51,9 @@ const App = () => {
         <Share><FiShare className="icon"/>Share</Share>
       </ButtonsLayout>
       <NumberOfPhotos><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</NumberOfPhotos>
-
     </Container>
-    <Modal1 open={modal1IsOpen} onClose={() => setModal1IsOpen(false)}/>
+
+    <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing}/>
     </>
   )
 }

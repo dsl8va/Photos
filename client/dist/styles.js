@@ -1,5 +1,7 @@
 import styled, {css} from 'styled-components';
 
+// ******************** APP ******************** //
+
 // ********** Containers ********** //
 
 export const Container = styled.div`
@@ -124,4 +126,143 @@ export const Image3Style = css`
   background-image: url(${props => props.photo});
   background-repeat: no-repeat;
   background-size: 100% 100%;
+`;
+
+// ******************** FIRST MODAL ******************** //
+
+// ********** Modal Structure and Overlay ********** //
+
+export const Modal1 = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  height: 90%;
+  width: 90%;
+  zIndex: 1000;
+  border-radius: 10px;
+  display: grid;
+  grid-template: 65px 35px 1fr / 2fr 1fr
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .7);
+  zIndex: 1000;
+`;
+
+// ********** Tabs ********** //
+
+export const Tabs = styled.div`
+  border: 1px solid black;
+  grid-row: 1;
+  grid-column: 1;
+  height: 65px;
+  white-space: nowrap;
+  overflow-x: auto;
+`;
+
+export const PhotosTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+export const MapTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+export const StreetViewTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+export const SchoolsTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+export const CrimeTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+export const CommuteTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+export const ShopEatTab = styled.div`
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+`;
+
+// ********** Top Right Button Area ********** //
+
+export const Modal1ButtonsArea = styled.div`
+  border: 1px solid black;
+  grid-row: 1;
+  grid-column: 2;
+  text-align: right;
+`;
+
+export const ModalSave = styled(Save)`
+  border: 1px solid rgb(232, 233, 234);
+`;
+
+export const ModalShare = styled(Share)`
+  border: 1px solid rgb(232, 233, 234);
+`;
+
+export const CloseButton = styled.div`
+  border: 1px solid black;
+  padding: 5px;
+  margin-right: 12px;
+  display: inline-block;
+
+  &:hover {
+    color: blue;
+  }
+`;
+
+// ********** House Information ********** //
+
+export const HouseInfo = styled.div`
+  border: 1px solid black;
+  grid-row: 2
+  grid-column: 1 / 3
+`;
+
+// ********** Gallery of House Photos ********** //
+
+export const HousePictures = styled.div`
+  border: 1px solid black;
+  grid-row: 3
+  grid-column: 1
+`;
+
+// ********** Schedule a Tour Area ********** //
+
+export const Tours = styled.div`
+  border: 1px solid black;
+  grid-row: 3
+  grid-column: 2
 `;
