@@ -1,10 +1,18 @@
 import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {Overlay, ImageDisplay, ImageSelected, CarouselHouseInfo, ModalSave, ModalShare, CloseButton2, TourButton, Modal2Buttons} from '../../dist/styles.js';
+import {FcNext, FcPrevious} from 'react-icons/fc'
+import {Overlay, ImageDisplay, ImageSelected, CarouselHouseInfo, ModalSave, ModalShare, CloseButton2, TourButton, Modal2Buttons, NextButton, PrevButton} from '../../dist/styles.js';
 
-const ImageCarousel = ({selectedImg, onClose, listing}) => {
+const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
   if (!selectedImg) return null
+
+  var handleNextClick = () => {
+    console.log('clicked!')
+    var nextImgIndex = listing.photos.lastIndexOf(selectedImg);
+    console.log('current index is', nextImgIndex);
+    setSelectedImg(listing.photos[nextImgIndex + 1]);
+  }
 
   return (
     <>
@@ -25,6 +33,9 @@ const ImageCarousel = ({selectedImg, onClose, listing}) => {
         </Modal2Buttons>
 
         <ImageSelected photo={selectedImg}></ImageSelected>
+
+        <NextButton onClick={handleNextClick}><FcNext className="next-prev-button"/></NextButton>
+        <PrevButton><FcPrevious className="next-prev-button"/></PrevButton>
 
       </ImageDisplay>
 

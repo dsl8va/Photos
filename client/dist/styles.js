@@ -455,3 +455,24 @@ export const ImageSelected = styled.div`
   transform: translate(-50%, -50%);
 `;
 
+export const NextButton = styled.div`
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: rgb(59, 65, 68);
+  position: fixed;
+  top: 50%;
+  right: 150px;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  color: white;
+
+  &:hover {
+    background: rgb(133, 133, 133);
+  }
+`;
+
+export const PrevButton = styled(NextButton)`
+  left: 200px;
+`;
+

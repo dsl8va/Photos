@@ -9,6 +9,7 @@ import ImageCarousel from './Modal2.jsx';
 
 const FirstModal = (props) => {
   const [selectedImg, setSelectedImg] = useState(null);
+  const [photoId, setPhotoId] = useState(null);
 
   if (!props.open) return null
 
@@ -36,7 +37,7 @@ const FirstModal = (props) => {
 
       </Modal1>
 
-      <ImageCarousel selectedImg={selectedImg} onClose={() => setSelectedImg(false)} listing={props.listing}/>
+      <ImageCarousel selectedImg={selectedImg} onClose={() => setSelectedImg(false)} listing={props.listing} setSelectedImg={setSelectedImg}/>
 
     </>
   )
