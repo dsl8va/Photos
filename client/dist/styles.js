@@ -292,7 +292,7 @@ export const HousePictures = styled.div`
   grid-row: 3;
   grid-column: 1;
   display: grid;
-  grid-template: repeat(5, 200px) / repeat(6, 1fr);
+  grid-template: 300px 200px 400px 200px 400px / repeat(6, 1fr);
   overflow-y: auto;
   gap: 7px;
 `;
@@ -362,7 +362,7 @@ export const HouseImage9 = styled.div`
   background-size: 100% 100%;
 `;
 export const HouseImage10 = styled.div`
-  grid-row: 6;
+  grid-row: 5;
   grid-column: 1 / 7;
   background: url(${props => props.photo});
   background-repeat: no-repeat;
@@ -408,11 +408,12 @@ export const ImageDisplay = styled.div`
 
 export const CarouselHouseInfo = styled.div`
   color: white;
-  margin: 10px;
+  margin: 23px;
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 23px;
 `;
 
 export const Modal2Buttons = styled.div`
@@ -430,7 +431,6 @@ export const TourButton = styled.div`
   background: rgb(217, 60, 35);
   color: white;
   border-radius: 5px;
-  position: relative;
 
   &:hover {
     background: white;
@@ -445,9 +445,13 @@ export const CloseButton2 = styled(CloseButton)`
 
 export const ImageSelected = styled.div`
   background: url(${props => props.photo});
-  width: 80%;
+  width: 800px;
   height: 500px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 

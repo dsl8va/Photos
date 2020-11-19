@@ -27,6 +27,7 @@ const ImageCarousel = ({selectedImg, onClose, listing}) => {
         <ImageSelected photo={selectedImg}></ImageSelected>
 
       </ImageDisplay>
+
     </>
 
   )
