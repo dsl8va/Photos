@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {Modal1, Overlay, Modal1ButtonsArea, HouseInfoArea, Tours, ModalSave, ModalShare, CloseButton, TourContainer, TourHeader, HouseInfo} from '../../dist/styles.js';
+import {Modal1, Overlay, Modal1ButtonsArea, HouseInfoArea, ModalSave, ModalShare, CloseButton, HouseInfo} from '../../dist/styles.js';
 import TabSection from './Modal1/TabSection.jsx';
 import HousePicturesSection from './Modal1/HousePictures.jsx';
+import TourSection from './Modal1/Tours.jsx';
+import ImageCarousel from './Modal2.jsx';
 
 const FirstModal = (props) => {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   if (!props.open) return null
 
   return (
@@ -26,15 +30,13 @@ const FirstModal = (props) => {
           <HouseInfo>{`${props.listing.address} | $${props.listing.price} | ${props.listing.beds} Beds ${props.listing.baths} Baths`}</HouseInfo>
         </HouseInfoArea>
 
-        <HousePicturesSection photos={props.listing.photos}/>
+        <HousePicturesSection photos={props.listing.photos} setSelectedImg={setSelectedImg}/>
 
-        <Tours>
-          <TourContainer>
-            <TourHeader>Schedule a Tour</TourHeader>
-          </TourContainer>
-        </Tours>
+        <TourSection />
 
       </Modal1>
+
+      <ImageCarousel selectedImg={selectedImg} onClose={() => setSelectedImg(false)} listing={props.listing}/>
 
     </>
   )

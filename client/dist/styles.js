@@ -140,7 +140,7 @@ export const Modal1 = styled.div`
   background: white;
   height: 90%;
   width: 90%;
-  zIndex: 1000;
+  zIndex: 999;
   border-radius: 10px;
   display: grid;
   grid-template: 60px 35px 1fr / 2fr 350px;
@@ -155,7 +155,7 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, .7);
-  zIndex: 1000;
+  zIndex: 999;
 `;
 
 // ********** Tabs ********** //
@@ -388,3 +388,33 @@ export const TourHeader = styled.h2`
   font-family: TruliaSansBold;
   margin: 10px;
 `;
+
+// ******************** SECOND MODAL ******************** //
+
+// ********** Schedule a Tour Area ********** //
+
+export const ImageDisplay = styled.div`
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  width: 100%;
+  zIndex: 1000;
+  font-family: TruliaSansBold;
+`;
+
+// export const Modal2ExitButton = styled.div`
+
+// `;
+
+export const ImageSelected = styled.div`
+  background: url(${props => props.photo});
+  width: 80%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;
+

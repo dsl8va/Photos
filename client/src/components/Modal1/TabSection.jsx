@@ -1,7 +1,7 @@
 import React from 'react';
 import {Tabs, PhotosTab, MapTab, StreetViewTab, SchoolsTab, CrimeTab, CommuteTab, ShopEatTab} from '../../../dist/styles.js';
 
-const TabSection = (props) => {
+const TabSection = () => {
   return (
     <Tabs>
       <PhotosTab>Photos</PhotosTab>
