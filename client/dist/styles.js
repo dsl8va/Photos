@@ -406,9 +406,42 @@ export const ImageDisplay = styled.div`
   font-family: TruliaSansBold;
 `;
 
-// export const Modal2ExitButton = styled.div`
+export const CarouselHouseInfo = styled.div`
+  color: white;
+  margin: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
 
-// `;
+export const Modal2Buttons = styled.div`
+  text-align: right;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+
+export const TourButton = styled.div`
+  padding: 10px 15px;
+  margin: 10px 7.5px 10px 10px;
+  display: inline-block;
+  background: rgb(217, 60, 35);
+  color: white;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover {
+    background: white;
+    color: rgb(217, 60, 35);
+    border-color: rgb(217, 60, 35);
+  }
+`;
+
+export const CloseButton2 = styled(CloseButton)`
+  color: white;
+`;
 
 export const ImageSelected = styled.div`
   background: url(${props => props.photo});
