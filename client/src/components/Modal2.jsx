@@ -8,10 +8,15 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
   if (!selectedImg) return null
 
   var handleNextClick = () => {
-    console.log('clicked!')
     var nextImgIndex = listing.photos.lastIndexOf(selectedImg);
-    console.log('current index is', nextImgIndex);
-    setSelectedImg(listing.photos[nextImgIndex + 1]);
+
+    nextImgIndex === (listing.photos.length - 1) ? setSelectedImg(listing.photos[0]) : setSelectedImg(listing.photos[nextImgIndex + 1]);
+  }
+
+  var handlePrevClick = () => {
+    var nextImgIndex = listing.photos.lastIndexOf(selectedImg);
+
+    nextImgIndex === 0 ? setSelectedImg(listing.photos[listing.photos.length - 1]) : setSelectedImg(listing.photos[nextImgIndex - 1]);
   }
 
   return (
@@ -35,7 +40,7 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
         <ImageSelected photo={selectedImg}></ImageSelected>
 
         <NextButton onClick={handleNextClick}><FcNext className="next-prev-button"/></NextButton>
-        <PrevButton><FcPrevious className="next-prev-button"/></PrevButton>
+        <PrevButton onClick={handlePrevClick}><FcPrevious className="next-prev-button"/></PrevButton>
 
       </ImageDisplay>
 
