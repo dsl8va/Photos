@@ -1,17 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-
 import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
-import {Container, Grid, ForSale, ButtonsLayout, Save, Share, NumberOfPhotos, Image1Style, Image2Style, Image3Style, HeartStyle} from '../../dist/styles.js';
-
 import FirstModal from './Modal1.jsx';
+import * as Styled from '../../dist/styles.js';
 
 // ********** Style Components with Props ********** //
-const Image1 = styled.div`${Image1Style}`;
-const Image2 = styled.div`${Image2Style}`;
-const Image3 = styled.div`${Image3Style}`;
+const Image1 = styled.div`${Styled.Image1Style}`;
+const Image2 = styled.div`${Styled.Image2Style}`;
+const Image3 = styled.div`${Styled.Image3Style}`;
 
 // ********** App Component ********** //
 
@@ -35,23 +33,23 @@ const App = () => {
 
   return (
     <>
-    <Container>
-      <Grid onClick={() => setModal1IsOpen(true)}>
+    <Styled.Container>
+      <Styled.Grid onClick={() => setModal1IsOpen(true)}>
         <Image1 photo={listing.photos ? listing.photos[0] : null}>
         </Image1>
         <Image2 photo={listing.photos ? listing.photos[2] : null}>
         </Image2>
         <Image3 photo={listing.photos ? listing.photos[listing.photos.length -1] : null}>
         </Image3>
-      </Grid>
+      </Styled.Grid>
 
-      <ForSale>FOR SALE</ForSale>
-      <ButtonsLayout>
-        <Save><FiHeart className="icon"/>Save</Save>
-        <Share><FiShare className="icon"/>Share</Share>
-      </ButtonsLayout>
-      <NumberOfPhotos><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</NumberOfPhotos>
-    </Container>
+      <Styled.ForSale>FOR SALE</Styled.ForSale>
+      <Styled.ButtonsLayout>
+        <Styled.Save><FiHeart className="icon"/>Save</Styled.Save>
+        <Styled.Share><FiShare className="icon"/>Share</Styled.Share>
+      </Styled.ButtonsLayout>
+      <Styled.NumberOfPhotos><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</Styled.NumberOfPhotos>
+    </Styled.Container>
 
     <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing}/>
     </>

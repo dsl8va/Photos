@@ -1,13 +1,13 @@
 import React from 'react';
-import {Tours, TourContainer, TourHeader} from '../../../dist/styles.js';
+import * as Styled from '../../../dist/styles.js';
 
 const TourSection = (props) => {
   return (
-    <Tours>
-      <TourContainer>
-        <TourHeader>Schedule a Tour</TourHeader>
-      </TourContainer>
-    </Tours>
+    <Styled.Tours>
+      <Styled.TourContainer>
+        <Styled.TourHeader>Schedule a Tour</Styled.TourHeader>
+      </Styled.TourContainer>
+    </Styled.Tours>
   )
 }
 
