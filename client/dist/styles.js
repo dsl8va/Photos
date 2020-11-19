@@ -372,21 +372,48 @@ export const HouseImage10 = styled.div`
 // ********** Schedule a Tour Area ********** //
 
 export const Tours = styled.div`
-  border: 1px solid black;
+  border: 1px solid rgb(232, 233, 234);
+  border-radius: 10px;
   grid-row: 3;
   grid-column: 2;
+  margin: 0px 10px;
+  padding: 20px;
+  box-shadow: rgba(59, 65, 68, 0.7) 0px 8px 20px -15px;
 `;
 
-export const TourContainer = styled.div`
-  border: 1px solid black;
-  height: 500px;
-  width: 95%;
-  margin: 0 auto;
-`;
-
-export const TourHeader = styled.h2`
+export const TourHeader = styled.div`
   font-family: TruliaSansBold;
-  margin: 10px;
+  font-size: 20px;
+  `;
+
+export const TourType = styled.div`
+  color: rgb(134, 144, 153);
+  padding-top: 15px;
+  padding-bottom: 7.5px;
+`;
+
+export const InPerson = styled.button`
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: rgb(0, 120, 130);
+  padding: 7px 16px;
+  border-color: transparent;
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  color: white;
+  width: 50%;
+`;
+
+export const VideoChat = styled.button`
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(134, 144, 153);
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  color: rgb(59, 59, 59);
+  width: 50%;
 `;
 
 // ******************** SECOND MODAL ******************** //
