@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
 const app = require('../server/app.js')
-const axios = require('axios');
 const supertest = require('supertest');
 
 // allows to make API calls on routes
