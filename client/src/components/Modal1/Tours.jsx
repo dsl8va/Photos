@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as Styled from '../../../dist/styles.js';
 import {getDates} from '../../utils/Logic.js';
 import TourDates from './TourDatesCarousel.jsx';
+import {MdWarning} from 'react-icons/md'
+import {caution} from '../../utils/SVG.jsx';
 
 const TourSection = () => {
+  const [financingCheck, setFinancingCheck] = useState(false);
+
   var dates = getDates();
   console.log('next4days array:', dates);
+
 
 
   return (
@@ -35,6 +40,19 @@ const TourSection = () => {
         </Styled.NamePhoneContainer>
 
         <Styled.TourEmailInput placeholder="Email"></Styled.TourEmailInput>
+
+        <Styled.FinancingCheckBoxContainer >
+          <Styled.FinancingCheckBoxInput type="checkbox" onClick={() => setFinancingCheck(!financingCheck)}/>
+          <Styled.FinancingCheckMessageContainer>
+            <Styled.FinancingCheckMessage>{financingCheck ? 'A licensed lender will call you soon' : 'I want to talk about financing'}</Styled.FinancingCheckMessage>
+          </Styled.FinancingCheckMessageContainer>
+        </Styled.FinancingCheckBoxContainer>
+
+        <Styled.ScheduleATourButton>Schedule a Tour</Styled.ScheduleATourButton>
+
+        <Styled.PublicHealthContainer>
+          <Styled.PublicHealthContainerText>Public Health Advisory</Styled.PublicHealthContainerText>
+        </Styled.PublicHealthContainer>
 
       </Styled.ToursContainer>
     </Styled.Tours>

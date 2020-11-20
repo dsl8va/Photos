@@ -505,6 +505,63 @@ export const TourEmailInput = styled.input`
   margin-top: 5px;
 `;
 
+export const FinancingCheckBoxContainer = styled.div`
+  width: 250px;
+  height: 20px;
+  margin-top: 7px;
+  position: relative;
+`;
+
+export const FinancingCheckBoxInput = styled.input`
+  &:checked {
+    filter: drop-shadow(rgba(0, 120, 130, 0.5) 0px 2px 3px);
+  }
+`;
+
+export const FinancingCheckMessageContainer = styled.div`
+  display: inline-block;
+`;
+
+export const FinancingCheckMessage = styled.span`
+  font-size: 10px;
+  font-family: TruliaSans;
+  color: rgb(134, 144, 153);
+  margin-left: 5px;
+`;
+
+export const ScheduleATourButton = styled.button`
+  border-radius: 10px;
+  font-family: TruliaSansBold;
+  background: rgb(217, 60, 35);
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  border: transparent;
+
+  &:hover {
+    background: white;
+    color: rgb(217, 60, 35);
+    border: 1px solid rgb(217, 60, 35);
+  }
+`;
+
+export const PublicHealthContainer = styled.div`
+  border: 1px solid black;
+  height: 30px;
+  width: 100%;
+  font-family: TruliaSans;
+  font-size: 15px;
+  color: rgb(0, 120, 130);
+`;
+
+export const PublicHealthContainerText = styled.span`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(0, 120, 130);
+  font-size: 16px;
+`;
 
 // ******************** SECOND MODAL ******************** //
 
