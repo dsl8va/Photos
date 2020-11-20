@@ -372,13 +372,20 @@ export const HouseImage10 = styled.div`
 // ********** Schedule a Tour Area ********** //
 
 export const Tours = styled.div`
-  border: 1px solid rgb(232, 233, 234);
-  border-radius: 10px;
   grid-row: 3;
   grid-column: 2;
-  margin: 0px 10px;
-  padding: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+`;
+
+export const ToursContainer = styled.div`
+  border: 1px solid rgb(232, 233, 234);
+  border-radius: 10px;
+  height: 500px;
+  width: 283px;
   box-shadow: rgba(59, 65, 68, 0.7) 0px 8px 20px -15px;
+  padding: 20px;
+  margin: 0px 5px;
 `;
 
 export const TourHeader = styled.div`
@@ -409,12 +416,95 @@ export const VideoChat = styled.button`
   border-bottom-right-radius: 10px;
   background: white;
   padding: 8px 16px;
-  border: 1px solid rgb(134, 144, 153);
+  border: .5px solid rgb(134, 144, 153);
   font-family: TruliaSansBold;
   font-size: 15px;
   color: rgb(59, 59, 59);
   width: 50%;
 `;
+
+export const CalendarContainer = styled.div`
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const CalendarDate = styled.div`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 65px;
+  height: 85px;
+`;
+
+export const CalendarDayOfWeek = styled.p`
+  font-family: TruliaSans;
+  margin: 11px 0 0 0;
+  font-size: 13px;
+`;
+export const CalendarDayOfMonth = styled.p`
+  font: TruliaSans;
+  margin: 0;
+  font-size: 20px;
+`;
+export const CalendarMonth = styled.p`
+  font-family: TruliaSans;
+  margin: 0;
+  font-size: 13px;
+`;
+
+export const ChooseATime = styled.select`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  padding: 5px;
+`;
+
+export const NamePhoneContainer = styled.div`
+  height: 38px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const TourNameInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 42%;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  display: inline;
+`;
+
+export const TourPhoneInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 40%;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  display: inline;
+`;
+
+export const TourEmailInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 261px;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  margin-top: 5px;
+`;
+
 
 // ******************** SECOND MODAL ******************** //
 
