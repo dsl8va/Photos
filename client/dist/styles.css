@@ -42,11 +42,10 @@ html, body {
 }
 
 .icon-warning {
-  color: rgb(0, 120, 130);
   font-size: 20px;
 }
 
 .next-prev-button {
-  transform: translate(100%, 100%);
-  color: white;
+  height: 25px;
+  width: 25px;
 }

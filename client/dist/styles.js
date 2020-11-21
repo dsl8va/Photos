@@ -381,7 +381,7 @@ export const Tours = styled.div`
 export const ToursContainer = styled.div`
   border: 1px solid rgb(232, 233, 234);
   border-radius: 10px;
-  height: 500px;
+  height: 540px;
   width: 283px;
   box-shadow: rgba(59, 65, 68, 0.7) 0px 8px 20px -15px;
   padding: 20px;
@@ -508,11 +508,12 @@ export const TourEmailInput = styled.input`
 export const FinancingCheckBoxContainer = styled.div`
   width: 250px;
   height: 20px;
-  margin-top: 7px;
-  position: relative;
+  display: flex;
 `;
 
 export const FinancingCheckBoxInput = styled.input`
+  margin-top: 5px;
+
   &:checked {
     filter: drop-shadow(rgba(0, 120, 130, 0.5) 0px 2px 3px);
   }
@@ -547,20 +548,26 @@ export const ScheduleATourButton = styled.button`
 `;
 
 export const PublicHealthContainer = styled.div`
-  border: 1px solid black;
   height: 30px;
   width: 100%;
   font-family: TruliaSans;
   font-size: 15px;
   color: rgb(0, 120, 130);
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
 `;
 
 export const PublicHealthContainerText = styled.span`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: rgb(0, 120, 130);
   font-size: 16px;
+  margin-left: 7px;
+`;
+
+export const TourDescription = styled.p`
+  font-family: TruliaSans;
+  font-size: 10px;
+  color: rgb(134, 144, 153);
+  line-height: 1.5;
 `;
 
 // ******************** SECOND MODAL ******************** //
@@ -629,7 +636,7 @@ export const ImageSelected = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export const NextButton = styled.div`
+export const NextButton = styled.button`
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -639,7 +646,11 @@ export const NextButton = styled.div`
   right: 150px;
   display: inline-block;
   transform: translate(-50%, -50%);
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
 
   &:hover {
     background: rgb(133, 133, 133);
@@ -650,3 +661,10 @@ export const PrevButton = styled(NextButton)`
   left: 200px;
 `;
 
+export const pageCountContainer = styled.div`
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 15px;
+`;

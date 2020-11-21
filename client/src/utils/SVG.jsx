@@ -10,4 +10,6 @@ export const checkMark = (
   </svg>
 );
 
-export const caution = (<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M27.549 26.933H4.371L15.96 3.755l11.589 23.178zM14.63 21.28v2.66h2.66v-2.66h-2.66zm0-8.585v6.643h2.66v-6.643h-2.66z" fill="rgb(0, 120, 130)" /></svg>);
+export const rightArrow = (<svg class="next-prev-button" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M17.65 16.513l-7.147-7.055 1.868-1.893 9.068 8.951-9.069 8.927-1.866-1.896z" fill="white"></path></svg>)
+
+export const leftArrow = (<svg class="next-prev-button" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M14.292 16.494l7.147 7.056-1.869 1.893-9.067-8.951 9.069-8.927 1.866 1.896z" fill="white"></path></svg>)

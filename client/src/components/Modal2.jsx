@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {FcNext, FcPrevious} from 'react-icons/fc'
+import {FcNext, FcPrevious} from 'react-icons/fc';
 import * as Styled from '../../dist/styles.js';
+import {rightArrow, leftArrow} from '../utils/SVG.jsx';
 
 const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
   if (!selectedImg) return null
@@ -39,8 +40,12 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
 
         <Styled.ImageSelected photo={selectedImg}></Styled.ImageSelected>
 
-        <Styled.NextButton onClick={handleNextClick}><FcNext className="next-prev-button"/></Styled.NextButton>
-        <Styled.PrevButton onClick={handlePrevClick}><FcPrevious className="next-prev-button"/></Styled.PrevButton>
+        <Styled.NextButton onClick={handleNextClick}>{rightArrow}</Styled.NextButton>
+        <Styled.PrevButton onClick={handlePrevClick}>{leftArrow}</Styled.PrevButton>
+
+        <Styled.pageCountContainer>
+          {`${listing.photos.indexOf(selectedImg) + 1} of ${listing.photos.length}`}
+        </Styled.pageCountContainer>
 
       </Styled.ImageDisplay>
 
