@@ -44,11 +44,14 @@ const App = () => {
       </Styled.Grid>
 
       <Styled.ForSale>FOR SALE</Styled.ForSale>
+
       <Styled.ButtonsLayout>
         <Styled.Save><FiHeart className="icon"/>Save</Styled.Save>
         <Styled.Share><FiShare className="icon"/>Share</Styled.Share>
       </Styled.ButtonsLayout>
-      <Styled.NumberOfPhotos><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</Styled.NumberOfPhotos>
+
+      <Styled.NumberOfPhotos onClick={() => setModal1IsOpen(true)}><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</Styled.NumberOfPhotos>
+
     </Styled.Container>
 
     <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing}/>

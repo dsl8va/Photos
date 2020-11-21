@@ -3,7 +3,7 @@ import * as Styled from '../../../dist/styles.js';
 import {getDates} from '../../utils/Logic.js';
 import TourDates from './TourDatesCarousel.jsx';
 import {MdWarning} from 'react-icons/md'
-import {caution} from '../../utils/SVG.jsx';
+import {caution, tourTypeIcon} from '../../utils/SVG.jsx';
 
 const TourSection = () => {
   const [financingCheck, setFinancingCheck] = useState(false);
@@ -15,7 +15,7 @@ const TourSection = () => {
     <Styled.Tours>
       <Styled.ToursContainer>
         <Styled.TourHeader>Schedule a Tour</Styled.TourHeader>
-        <Styled.TourType>Tour Type</Styled.TourType>
+        <Styled.TourType>Tour Type{tourTypeIcon}</Styled.TourType>
         <Styled.InPerson>In-Person</Styled.InPerson><Styled.VideoChat>Video Chat</Styled.VideoChat>
 
         <Styled.CalendarContainer>

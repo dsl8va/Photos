@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {FcNext, FcPrevious} from 'react-icons/fc';
 import * as Styled from '../../dist/styles.js';
 import {rightArrow, leftArrow} from '../utils/SVG.jsx';
 

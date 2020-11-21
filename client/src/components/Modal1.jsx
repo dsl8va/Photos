@@ -9,7 +9,6 @@ import * as Styled from '../../dist/styles.js';
 
 const FirstModal = (props) => {
   const [selectedImg, setSelectedImg] = useState(null);
-  const [photoId, setPhotoId] = useState(null);
 
   if (!props.open) return null
 
@@ -28,7 +27,7 @@ const FirstModal = (props) => {
         </Styled.Modal1ButtonsArea>
 
         <Styled.HouseInfoArea>
-          <Styled.HouseInfo>{`${props.listing.address} | $${props.listing.price} | ${props.listing.beds} Beds ${props.listing.baths} Baths`}</Styled.HouseInfo>
+          <Styled.HouseInfo>{`${props.listing.address} | $${props.listing.price.toLocaleString('en')} | ${props.listing.beds} Beds ${props.listing.baths} Baths`}</Styled.HouseInfo>
         </Styled.HouseInfoArea>
 
         <HousePicturesSection photos={props.listing.photos} setSelectedImg={setSelectedImg}/>
