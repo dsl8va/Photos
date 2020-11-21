@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {FcNext, FcPrevious} from 'react-icons/fc'
-import {Overlay, ImageDisplay, ImageSelected, CarouselHouseInfo, ModalSave, ModalShare, CloseButton2, TourButton, Modal2Buttons, NextButton, PrevButton} from '../../dist/styles.js';
+import {FcNext, FcPrevious} from 'react-icons/fc';
+import * as Styled from '../../dist/styles.js';
+import {rightArrow, leftArrow} from '../utils/SVG.jsx';
 
 const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
   if (!selectedImg) return null
@@ -21,28 +22,32 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
 
   return (
     <>
-      <ImageDisplay>
+      <Styled.ImageDisplay>
 
-        <CarouselHouseInfo>
+        <Styled.CarouselHouseInfo>
         {`${listing.address} | $${listing.price} | ${listing.beds} Beds ${listing.baths} Baths`}
-        </CarouselHouseInfo>
+        </Styled.CarouselHouseInfo>
 
-        <Modal2Buttons>
-          <TourButton>Schedule a Tour</TourButton>
+        <Styled.Modal2Buttons>
+          <Styled.TourButton>Schedule a Tour</Styled.TourButton>
 
-          <ModalSave><FiHeart className="icon-modal"/>Save</ModalSave>
+          <Styled.ModalSave><FiHeart className="icon-modal"/>Save</Styled.ModalSave>
 
-          <ModalShare><FiShare className="icon-modal"/>Share</ModalShare>
+          <Styled.ModalShare><FiShare className="icon-modal"/>Share</Styled.ModalShare>
 
-          <CloseButton2 onClick={onClose}><CgClose className="close-button"/></CloseButton2>
-        </Modal2Buttons>
+          <Styled.CloseButton2 onClick={onClose}><CgClose className="close-button"/></Styled.CloseButton2>
+        </Styled.Modal2Buttons>
 
-        <ImageSelected photo={selectedImg}></ImageSelected>
+        <Styled.ImageSelected photo={selectedImg}></Styled.ImageSelected>
 
-        <NextButton onClick={handleNextClick}><FcNext className="next-prev-button"/></NextButton>
-        <PrevButton onClick={handlePrevClick}><FcPrevious className="next-prev-button"/></PrevButton>
+        <Styled.NextButton onClick={handleNextClick}>{rightArrow}</Styled.NextButton>
+        <Styled.PrevButton onClick={handlePrevClick}>{leftArrow}</Styled.PrevButton>
 
-      </ImageDisplay>
+        <Styled.pageCountContainer>
+          {`${listing.photos.indexOf(selectedImg) + 1} of ${listing.photos.length}`}
+        </Styled.pageCountContainer>
+
+      </Styled.ImageDisplay>
 
     </>
 

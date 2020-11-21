@@ -372,21 +372,202 @@ export const HouseImage10 = styled.div`
 // ********** Schedule a Tour Area ********** //
 
 export const Tours = styled.div`
-  border: 1px solid black;
   grid-row: 3;
   grid-column: 2;
+  overflow-y: auto;
+  max-height: 100%;
 `;
 
-export const TourContainer = styled.div`
-  border: 1px solid black;
-  height: 500px;
-  width: 95%;
-  margin: 0 auto;
+export const ToursContainer = styled.div`
+  border: 1px solid rgb(232, 233, 234);
+  border-radius: 10px;
+  height: 540px;
+  width: 283px;
+  box-shadow: rgba(59, 65, 68, 0.7) 0px 8px 20px -15px;
+  padding: 20px;
+  margin: 0px 5px;
 `;
 
-export const TourHeader = styled.h2`
+export const TourHeader = styled.div`
   font-family: TruliaSansBold;
-  margin: 10px;
+  font-size: 20px;
+  `;
+
+export const TourType = styled.div`
+  color: rgb(134, 144, 153);
+  padding-top: 15px;
+  padding-bottom: 7.5px;
+`;
+
+export const InPerson = styled.button`
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: rgb(0, 120, 130);
+  padding: 7px 16px;
+  border-color: transparent;
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  color: white;
+  width: 50%;
+`;
+
+export const VideoChat = styled.button`
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: white;
+  padding: 8px 16px;
+  border: .5px solid rgb(134, 144, 153);
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  color: rgb(59, 59, 59);
+  width: 50%;
+`;
+
+export const CalendarContainer = styled.div`
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const CalendarDate = styled.div`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 65px;
+  height: 85px;
+`;
+
+export const CalendarDayOfWeek = styled.p`
+  font-family: TruliaSans;
+  margin: 11px 0 0 0;
+  font-size: 13px;
+`;
+export const CalendarDayOfMonth = styled.p`
+  font: TruliaSans;
+  margin: 0;
+  font-size: 20px;
+`;
+export const CalendarMonth = styled.p`
+  font-family: TruliaSans;
+  margin: 0;
+  font-size: 13px;
+`;
+
+export const ChooseATime = styled.select`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-family: TruliaSansBold;
+  font-size: 15px;
+  padding: 5px;
+`;
+
+export const NamePhoneContainer = styled.div`
+  height: 38px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const TourNameInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 42%;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  display: inline;
+`;
+
+export const TourPhoneInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 40%;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  display: inline;
+`;
+
+export const TourEmailInput = styled.input`
+  border: .5px solid rgb(134, 144, 153);
+  border-radius: 10px;
+  width: 261px;
+  height: 30px;
+  font-family: TruliaSansBold;
+  padding: 3px 10px;
+  margin-top: 5px;
+`;
+
+export const FinancingCheckBoxContainer = styled.div`
+  width: 250px;
+  height: 20px;
+  display: flex;
+`;
+
+export const FinancingCheckBoxInput = styled.input`
+  margin-top: 5px;
+
+  &:checked {
+    filter: drop-shadow(rgba(0, 120, 130, 0.5) 0px 2px 3px);
+  }
+`;
+
+export const FinancingCheckMessageContainer = styled.div`
+  display: inline-block;
+`;
+
+export const FinancingCheckMessage = styled.span`
+  font-size: 10px;
+  font-family: TruliaSans;
+  color: rgb(134, 144, 153);
+  margin-left: 5px;
+`;
+
+export const ScheduleATourButton = styled.button`
+  border-radius: 10px;
+  font-family: TruliaSansBold;
+  background: rgb(217, 60, 35);
+  color: white;
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  border: transparent;
+
+  &:hover {
+    background: white;
+    color: rgb(217, 60, 35);
+    border: 1px solid rgb(217, 60, 35);
+  }
+`;
+
+export const PublicHealthContainer = styled.div`
+  height: 30px;
+  width: 100%;
+  font-family: TruliaSans;
+  font-size: 15px;
+  color: rgb(0, 120, 130);
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+`;
+
+export const PublicHealthContainerText = styled.span`
+  font-size: 16px;
+  margin-left: 7px;
+`;
+
+export const TourDescription = styled.p`
+  font-family: TruliaSans;
+  font-size: 10px;
+  color: rgb(134, 144, 153);
+  line-height: 1.5;
 `;
 
 // ******************** SECOND MODAL ******************** //
@@ -455,7 +636,7 @@ export const ImageSelected = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export const NextButton = styled.div`
+export const NextButton = styled.button`
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -465,7 +646,11 @@ export const NextButton = styled.div`
   right: 150px;
   display: inline-block;
   transform: translate(-50%, -50%);
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
 
   &:hover {
     background: rgb(133, 133, 133);
@@ -476,3 +661,10 @@ export const PrevButton = styled(NextButton)`
   left: 200px;
 `;
 
+export const pageCountContainer = styled.div`
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 15px;
+`;

@@ -5,11 +5,6 @@
   font-family:"TruliaSansBold";src: url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff2") format("woff2"), url("https://www.trulia.com/images/fonts/TruliaSans_20190627/TruliaSansWeb-Bold.woff") format("woff");
 }
 
-/* ::-webkit-scrollbar {
-  display: none;
-}*/
-
-
 html, body {
   font-family: TruliaSans, system, -apple-system, Roboto, "Segoe UI Bold", Arial, sans-serif;
 }
@@ -46,7 +41,11 @@ html, body {
   left: 0;
 }
 
+.icon-warning {
+  font-size: 20px;
+}
+
 .next-prev-button {
-  transform: translate(100%, 100%);
-  color: white;
+  height: 25px;
+  width: 25px;
 }
