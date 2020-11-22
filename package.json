@@ -12,7 +12,7 @@
     "seed": "node db/seed.js",
     "test": "jest",
     "build": "webpack",
-    "start": "./server/index.js"
+    "start": "node ./server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.0",
