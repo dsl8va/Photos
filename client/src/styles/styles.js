@@ -147,7 +147,7 @@ export const Modal1 = styled.div`
   zIndex: 999;
   border-radius: 10px;
   display: grid;
-  grid-template: 60px 35px 1fr / 2fr 350px;
+  grid-template: 60px 35px 1fr / 1fr 350px;
   font-family: TruliaSansBold;
   color: rgb(59, 65, 68);
 `;
@@ -168,7 +168,7 @@ export const Tabs = styled.div`
   grid-row: 1;
   grid-column: 1;
   height: 60px;
-  white-space: nowrap;s
+  white-space: nowrap;
   overflow-x: auto;
 `;
 
@@ -212,11 +212,13 @@ export const ModalSave = styled(Save)`
 
 export const ModalShare = styled(Share)`
   border: 1px solid rgb(232, 233, 234);
+  margin-right: 0px;
 `;
 
 export const CloseButton = styled.div`
   padding: 5px;
-  margin-right: 12px;
+  margin-left: 5px;
+  margin-right: 10px;
   display: inline-block;
 
   &:hover {
@@ -306,18 +308,18 @@ export const HouseImage10 = styled(HouseImage1)`
 export const Tours = styled.div`
   grid-row: 3;
   grid-column: 2;
-  overflow-y: auto;
   max-height: 100%;
+  overflow-y: auto;
 `;
 
 export const ToursContainer = styled.div`
   border: 1px solid rgb(232, 233, 234);
   border-radius: 10px;
   height: 560px;
-  width: 283px;
+  width: 285px;
   box-shadow: rgba(59, 65, 68, 0.18) 0px 17px 21px -1px;
   padding: 20px;
-  margin: 0px 5px 10px 5px;
+  margin: 0px 0px 15px 5px;
 `;
 
 export const TourHeader = styled.div`
