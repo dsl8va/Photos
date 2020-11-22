@@ -10,7 +10,9 @@
     "client-dev": "webpack --watch -d eval-source-map",
     "server-dev": "nodemon ./server/index.js",
     "seed": "node db/seed.js",
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack",
+    "start": "./server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.0",
