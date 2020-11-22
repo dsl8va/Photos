@@ -4,7 +4,8 @@ import axios from 'axios';
 import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
 import FirstModal from './Modal1.jsx';
-import * as Styled from '../../dist/styles.js';
+import * as Styled from '../styles/styles.js';
+import s from '../styles/styles.css';
 
 // ********** Style Components with Props ********** //
 const Image1 = styled.div`${Styled.Image1Style}`;
@@ -46,11 +47,11 @@ const App = () => {
       <Styled.ForSale>FOR SALE</Styled.ForSale>
 
       <Styled.ButtonsLayout>
-        <Styled.Save><FiHeart className="icon"/>Save</Styled.Save>
-        <Styled.Share><FiShare className="icon"/>Share</Styled.Share>
+        <Styled.Save><FiHeart className={`${s.icon}`}/>Save</Styled.Save>
+        <Styled.Share><FiShare className={`${s.icon}`}/>Share</Styled.Share>
       </Styled.ButtonsLayout>
 
-      <Styled.NumberOfPhotos onClick={() => setModal1IsOpen(true)}><FaRegImage className="image-icon"/>{listing.photos ? listing.photos.length :null}</Styled.NumberOfPhotos>
+      <Styled.NumberOfPhotos onClick={() => setModal1IsOpen(true)}><FaRegImage className={`${s.imageIcon}`}/>{listing.photos ? listing.photos.length :null}</Styled.NumberOfPhotos>
 
     </Styled.Container>
 

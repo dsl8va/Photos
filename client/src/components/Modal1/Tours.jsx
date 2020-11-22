@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import * as Styled from '../../../dist/styles.js';
+import * as Styled from '../../styles/styles.js';
 import {getDates} from '../../utils/Logic.js';
 import TourDates from './TourDatesCarousel.jsx';
 import {MdWarning} from 'react-icons/md'
 import {caution, tourTypeIcon} from '../../utils/SVG.jsx';
+import s from '../../styles/styles.css';
 
 const TourSection = () => {
   const [financingCheck, setFinancingCheck] = useState(false);
@@ -43,7 +44,7 @@ const TourSection = () => {
         <Styled.ScheduleATourButton>Schedule a Tour</Styled.ScheduleATourButton>
 
         <Styled.PublicHealthContainer>
-          <MdWarning className="icon-warning"/>
+          <MdWarning className={`${s.iconWarning}`}/>
           <Styled.PublicHealthContainerText>Public Health Advisory</Styled.PublicHealthContainerText>
         </Styled.PublicHealthContainer>
 

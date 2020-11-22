@@ -5,7 +5,8 @@ import TabSection from './Modal1/TabSection.jsx';
 import HousePicturesSection from './Modal1/HousePictures.jsx';
 import TourSection from './Modal1/Tours.jsx';
 import ImageCarousel from './Modal2.jsx';
-import * as Styled from '../../dist/styles.js';
+import * as Styled from '../styles/styles.js';
+import s from '../styles/styles.css';
 
 const FirstModal = (props) => {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -21,9 +22,9 @@ const FirstModal = (props) => {
         <TabSection/>
 
         <Styled.Modal1ButtonsArea>
-          <Styled.ModalSave><FiHeart className="icon-modal"/>Save</Styled.ModalSave>
-          <Styled.ModalShare><FiShare className="icon-modal"/>Share</Styled.ModalShare>
-          <Styled.CloseButton onClick={props.onClose}><CgClose className="close-button"/></Styled.CloseButton>
+          <Styled.ModalSave><FiHeart className={`${s.iconModal}`}/>Save</Styled.ModalSave>
+          <Styled.ModalShare><FiShare className={`${s.iconModal}`}/>Share</Styled.ModalShare>
+          <Styled.CloseButton onClick={props.onClose}><CgClose className={`${s.closeButton}`}/></Styled.CloseButton>
         </Styled.Modal1ButtonsArea>
 
         <Styled.HouseInfoArea>

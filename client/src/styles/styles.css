@@ -18,7 +18,7 @@ html, body {
   padding: 3px 7px 3px 5px;
 }
 
-.icon-modal {
+.iconModal {
   color: rgb(59, 65, 68);
   font-size: 20px;
   position: relative;
@@ -27,34 +27,30 @@ html, body {
   padding: 3px 7px 3px 5px;
 }
 
-.icon-tourtype {
+.iconTourtype {
   height: 25px;
   width: 25px;
 }
 
-.icon-checkmark {
-  background-color: rgb(0, 120, 130);
-}
-
-.image-icon {
+.imageIcon {
   position: relative;
   top: 5px;
   left: 0;
   padding: 3px 7px 3px 2px;
 }
 
-.close-button {
+.closeButton {
   font-size: 30px;
   position: relative;
   top: 10px;
   left: 0;
 }
 
-.icon-warning {
+.iconWarning {
   font-size: 20px;
 }
 
-.next-prev-button {
+.nextPrevButton {
   height: 25px;
   width: 25px;
 }
