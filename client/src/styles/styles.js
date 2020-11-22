@@ -22,8 +22,9 @@ export const Grid = styled.div`
   height: 100%;
   transition: all .5s ease;
 
-  &:hover {
+  ${Container}:hover & {
     transform: scale(1.05);
+    cursor: pointer;
   }
 `;
 
@@ -63,6 +64,7 @@ export const Save = styled.div`
 
   &:hover {
     background: rgb(232, 233, 234);
+    cursor: pointer;
   }
 `;
 
@@ -77,6 +79,7 @@ export const Share = styled.div`
 
   &:hover {
     background: rgb(232, 233, 234);
+    cursor: pointer;
   }
 `;
 
@@ -95,6 +98,7 @@ export const NumberOfPhotos = styled.div`
 
   &:hover {
     background: rgba(134, 144, 153, 0.8);
+    cursor: pointer;
   }
 `;
 
@@ -172,24 +176,17 @@ export const PhotosTab = styled.div`
   border: 1px solid rgb(232, 233, 234);
   border-radius: 10px;
   padding: 10px 20px;
-  margin-left: 10px;
-  margin-right: 2px;
+  margin: 10px 2px 0 10px;
   display: inline-block;
   color: rgb(0, 120, 130);
-`;
-
-export const MapTab = styled.div`
-  padding: 10px 20px;
-  margin: 10px 2px;
-  display: inline-block;
-  border-radius: 10px;
+  box-shadow: rgba(59, 65, 68, 0.4) 0px 8px 20px -15px;
 
   &:hover {
-    background: rgb(232, 233, 234);
+    cursor: pointer;
   }
 `;
 
-export const StreetViewTab = styled.div`
+export const OtherTab = styled.div`
   padding: 10px 20px;
   margin: 2px;
   display: inline-block;
@@ -197,49 +194,7 @@ export const StreetViewTab = styled.div`
 
   &:hover {
     background: rgb(232, 233, 234);
-  }
-`;
-
-export const SchoolsTab = styled.div`
-  padding: 10px 20px;
-  margin: 2px;
-  display: inline-block;
-  border-radius: 10px;
-
-  &:hover {
-    background: rgb(232, 233, 234);
-  }
-`;
-
-export const CrimeTab = styled.div`
-  padding: 10px 20px;
-  margin: 2px;
-  display: inline-block;
-  border-radius: 10px;
-
-  &:hover {
-    background: rgb(232, 233, 234);
-  }
-`;
-export const CommuteTab = styled.div`
-  padding: 10px 20px;
-  margin: 2px;
-  display: inline-block;
-  border-radius: 10px;
-
-  &:hover {
-    background: rgb(232, 233, 234);
-  }
-`;
-
-export const ShopEatTab = styled.div`
-  padding: 10px 20px;
-  margin: 2px;
-  display: inline-block;
-  border-radius: 10px;
-
-  &:hover {
-    background: rgb(232, 233, 234);
+    cursor: pointer;
   }
 `;
 
@@ -266,6 +221,7 @@ export const CloseButton = styled.div`
 
   &:hover {
     color: rgb(0, 120, 130);
+    cursor: pointer;
   }
 `;
 
@@ -304,69 +260,45 @@ export const HouseImage1 = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
+  &:hover {
+    cursor: pointer;
+  }
 `;
-export const HouseImage2 = styled.div`
+export const HouseImage2 = styled(HouseImage1)`
   grid-row: 1;
   grid-column: 4 / 7;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage3 = styled.div`
+export const HouseImage3 = styled(HouseImage1)`
   grid-row: 2;
   grid-column: 1 / 3;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage4 = styled.div`
+export const HouseImage4 = styled(HouseImage1)`
   grid-row: 2;
   grid-column: 3 / 5;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage5 = styled.div`
+export const HouseImage5 = styled(HouseImage1)`
   grid-row: 2;
   grid-column: 5 / 7;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage6 = styled.div`
+export const HouseImage6 = styled(HouseImage1)`
   grid-row: 3;
   grid-column: 1 / 7;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage7 = styled.div`
+export const HouseImage7 = styled(HouseImage1)`
   grid-row: 4;
   grid-column: 1 / 3;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage8 = styled.div`
+export const HouseImage8 = styled(HouseImage1)`
   grid-row: 4;
   grid-column: 3 / 5;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage9 = styled.div`
+export const HouseImage9 = styled(HouseImage1)`
   grid-row: 4;
   grid-column: 5 / 7;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
-export const HouseImage10 = styled.div`
+export const HouseImage10 = styled(HouseImage1)`
   grid-row: 5;
   grid-column: 1 / 7;
-  background: url(${props => props.photo});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 `;
 
 // ********** Schedule a Tour Area ********** //
@@ -381,11 +313,11 @@ export const Tours = styled.div`
 export const ToursContainer = styled.div`
   border: 1px solid rgb(232, 233, 234);
   border-radius: 10px;
-  height: 540px;
+  height: 560px;
   width: 283px;
-  box-shadow: rgba(59, 65, 68, 0.7) 0px 8px 20px -15px;
+  box-shadow: rgba(59, 65, 68, 0.18) 0px 17px 21px -1px;
   padding: 20px;
-  margin: 0px 5px;
+  margin: 0px 5px 10px 5px;
 `;
 
 export const TourHeader = styled.div`
@@ -395,8 +327,11 @@ export const TourHeader = styled.div`
 
 export const TourType = styled.div`
   color: rgb(134, 144, 153);
-  padding-top: 15px;
+  padding-top: 12px;
   padding-bottom: 7.5px;
+  display: flex;
+  align-items: center;
+  font-family: TruliaSans;
 `;
 
 export const InPerson = styled.button`
@@ -416,7 +351,7 @@ export const VideoChat = styled.button`
   border-bottom-right-radius: 10px;
   background: white;
   padding: 8px 16px;
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);;
   font-family: TruliaSansBold;
   font-size: 15px;
   color: rgb(59, 59, 59);
@@ -427,14 +362,14 @@ export const CalendarContainer = styled.div`
   width: 100%;
   height: 90px;
   text-align: center;
-  margin: 5px 0px;
+  margin: 7px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
 export const CalendarDate = styled.div`
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);
   border-radius: 10px;
   width: 65px;
   height: 85px;
@@ -457,7 +392,7 @@ export const CalendarMonth = styled.p`
 `;
 
 export const ChooseATime = styled.select`
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);
   border-radius: 10px;
   width: 100%;
   height: 40px;
@@ -469,14 +404,14 @@ export const ChooseATime = styled.select`
 export const NamePhoneContainer = styled.div`
   height: 38px;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 7px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
 export const TourNameInput = styled.input`
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);
   border-radius: 10px;
   width: 42%;
   height: 30px;
@@ -486,7 +421,7 @@ export const TourNameInput = styled.input`
 `;
 
 export const TourPhoneInput = styled.input`
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);
   border-radius: 10px;
   width: 40%;
   height: 30px;
@@ -496,19 +431,20 @@ export const TourPhoneInput = styled.input`
 `;
 
 export const TourEmailInput = styled.input`
-  border: .5px solid rgb(134, 144, 153);
+  border: .5px solid rgb(205, 209, 212);
   border-radius: 10px;
   width: 261px;
   height: 30px;
   font-family: TruliaSansBold;
   padding: 3px 10px;
-  margin-top: 5px;
+  margin-top: 7px;
 `;
 
 export const FinancingCheckBoxContainer = styled.div`
   width: 250px;
   height: 20px;
   display: flex;
+  margin: 5px 0;
 `;
 
 export const FinancingCheckBoxInput = styled.input`
@@ -516,6 +452,10 @@ export const FinancingCheckBoxInput = styled.input`
 
   &:checked {
     filter: drop-shadow(rgba(0, 120, 130, 0.5) 0px 2px 3px);
+  }
+
+  &:hover {
+    cursor: pointer
   }
 `;
 
@@ -544,6 +484,7 @@ export const ScheduleATourButton = styled.button`
     background: white;
     color: rgb(217, 60, 35);
     border: 1px solid rgb(217, 60, 35);
+    cursor: pointer;
   }
 `;
 
@@ -617,6 +558,7 @@ export const TourButton = styled.div`
     background: white;
     color: rgb(217, 60, 35);
     border-color: rgb(217, 60, 35);
+    cursor: pointer;
   }
 `;
 
@@ -654,6 +596,7 @@ export const NextButton = styled.button`
 
   &:hover {
     background: rgb(133, 133, 133);
+    cursor: pointer;
   }
 `;
 

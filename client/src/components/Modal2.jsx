@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {FiHeart, FiShare} from 'react-icons/fi';
 import {CgClose} from 'react-icons/cg';
-import {FcNext, FcPrevious} from 'react-icons/fc';
-import * as Styled from '../../dist/styles.js';
+import * as Styled from '../styles/styles.js';
 import {rightArrow, leftArrow} from '../utils/SVG.jsx';
+import s from '../styles/styles.css';
 
 const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
   if (!selectedImg) return null
@@ -31,11 +31,11 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
         <Styled.Modal2Buttons>
           <Styled.TourButton>Schedule a Tour</Styled.TourButton>
 
-          <Styled.ModalSave><FiHeart className="icon-modal"/>Save</Styled.ModalSave>
+          <Styled.ModalSave><FiHeart className={`${s.iconModal}`}/>Save</Styled.ModalSave>
 
-          <Styled.ModalShare><FiShare className="icon-modal"/>Share</Styled.ModalShare>
+          <Styled.ModalShare><FiShare className={`${s.iconModal}`}/>Share</Styled.ModalShare>
 
-          <Styled.CloseButton2 onClick={onClose}><CgClose className="close-button"/></Styled.CloseButton2>
+          <Styled.CloseButton2 onClick={onClose}><CgClose className={`${s.closeButton}`}/></Styled.CloseButton2>
         </Styled.Modal2Buttons>
 
         <Styled.ImageSelected photo={selectedImg}></Styled.ImageSelected>

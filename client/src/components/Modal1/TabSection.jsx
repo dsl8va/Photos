@@ -1,16 +1,16 @@
 import React from 'react';
-import * as Styled from '../../../dist/styles.js';
+import * as Styled from '../../styles/styles.js';
 
 const TabSection = () => {
   return (
     <Styled.Tabs>
       <Styled.PhotosTab>Photos</Styled.PhotosTab>
-      <Styled.MapTab>Map</Styled.MapTab>
-      <Styled.StreetViewTab>Street View</Styled.StreetViewTab>
-      <Styled.SchoolsTab>Schools</Styled.SchoolsTab>
-      <Styled.CrimeTab>Crime</Styled.CrimeTab>
-      <Styled.CommuteTab>Commute</Styled.CommuteTab>
-      <Styled.ShopEatTab>Shop & Eat</Styled.ShopEatTab>
+      <Styled.OtherTab>Map</Styled.OtherTab>
+      <Styled.OtherTab>Street View</Styled.OtherTab>
+      <Styled.OtherTab>Schools</Styled.OtherTab>
+      <Styled.OtherTab>Crime</Styled.OtherTab>
+      <Styled.OtherTab>Commute</Styled.OtherTab>
+      <Styled.OtherTab>Shop & Eat</Styled.OtherTab>
     </Styled.Tabs>
   )
 }

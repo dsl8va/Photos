@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from '../../../dist/styles.js';
+import * as Styled from '../../styles/styles.js';
 
 const HousePicturesSection = (props) => {
 

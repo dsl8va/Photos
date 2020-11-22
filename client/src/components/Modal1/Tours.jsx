@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import * as Styled from '../../../dist/styles.js';
+import * as Styled from '../../styles/styles.js';
 import {getDates} from '../../utils/Logic.js';
 import TourDates from './TourDatesCarousel.jsx';
 import {MdWarning} from 'react-icons/md'
-import {caution} from '../../utils/SVG.jsx';
+import {caution, tourTypeIcon} from '../../utils/SVG.jsx';
+import s from '../../styles/styles.css';
 
 const TourSection = () => {
   const [financingCheck, setFinancingCheck] = useState(false);
@@ -15,7 +16,7 @@ const TourSection = () => {
     <Styled.Tours>
       <Styled.ToursContainer>
         <Styled.TourHeader>Schedule a Tour</Styled.TourHeader>
-        <Styled.TourType>Tour Type</Styled.TourType>
+        <Styled.TourType>Tour Type{tourTypeIcon}</Styled.TourType>
         <Styled.InPerson>In-Person</Styled.InPerson><Styled.VideoChat>Video Chat</Styled.VideoChat>
 
         <Styled.CalendarContainer>
@@ -23,7 +24,7 @@ const TourSection = () => {
         </Styled.CalendarContainer>
 
         <Styled.ChooseATime>
-          {times.map(time => <option>{time}</option>)}
+          {times.map((time, index) => <option key={index}>{time}</option>)}
         </Styled.ChooseATime>
 
         <Styled.NamePhoneContainer>
@@ -43,7 +44,7 @@ const TourSection = () => {
         <Styled.ScheduleATourButton>Schedule a Tour</Styled.ScheduleATourButton>
 
         <Styled.PublicHealthContainer>
-          <MdWarning className="icon-warning"/>
+          <MdWarning className={`${s.iconWarning}`}/>
           <Styled.PublicHealthContainerText>Public Health Advisory</Styled.PublicHealthContainerText>
         </Styled.PublicHealthContainer>
 
