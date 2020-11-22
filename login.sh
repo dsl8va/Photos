@@ -1,0 +1,1 @@
+ ssh -i '/Users/David/HackReactor/SEI/senior_phase/Photos/FEC.pem' ec2-user@ec2-18-144-31-230.us-west-1.compute.amazonaws.com

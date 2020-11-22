@@ -24,7 +24,7 @@ const TourSection = () => {
         </Styled.CalendarContainer>
 
         <Styled.ChooseATime>
-          {times.map(time => <option>{time}</option>)}
+          {times.map((time, index) => <option key={index}>{time}</option>)}
         </Styled.ChooseATime>
 
         <Styled.NamePhoneContainer>
