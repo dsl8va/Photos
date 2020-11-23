@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 
 // ******************** APP ******************** //
 
@@ -136,12 +136,31 @@ export const Image3Style = css`
 
 // ********** Modal Structure and Overlay ********** //
 
+const OpacityFrames = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+}
+`;
+
+const TransitionFrames = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.5)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
 export const Modal1 = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: white;
+  top: 5%;
+  left: 5%;
   height: 90%;
   width: 90%;
   zIndex: 999;
@@ -150,6 +169,11 @@ export const Modal1 = styled.div`
   grid-template: 60px 35px 1fr / 1fr 350px;
   font-family: TruliaSansBold;
   color: rgb(59, 65, 68);
+
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: ${TransitionFrames};
 `;
 
 export const Overlay = styled.div`
@@ -160,6 +184,11 @@ export const Overlay = styled.div`
   bottom: 0;
   background: rgba(0, 0, 0, .7);
   zIndex: 999;
+
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: ${OpacityFrames};
 `;
 
 // ********** Tabs ********** //
