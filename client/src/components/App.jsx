@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import {FiHeart, FiShare} from 'react-icons/fi'
@@ -31,6 +31,17 @@ const App = () => {
         console.log(err);
       })
   }
+
+  const keyPress = useCallback(e => {
+    if (e.key === 'Escape' && modal1IsOpen) {
+      setModal1IsOpen(false);
+    }
+  }, [setModal1IsOpen, modal1IsOpen]);
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    return () => document.removeEventListener('keydown', keyPress);
+  }, [keyPress]);
 
   return (
     <>

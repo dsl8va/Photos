@@ -188,7 +188,7 @@ export const PhotosTab = styled.div`
 
 export const OtherTab = styled.div`
   padding: 10px 20px;
-  margin: 2px;
+  margin: 0 2px;
   display: inline-block;
   border-radius: 10px;
 

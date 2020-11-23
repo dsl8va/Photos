@@ -15,7 +15,7 @@ const FirstModal = (props) => {
 
   return (
     <>
-      <Styled.Overlay/>
+      <Styled.Overlay onClick={props.onClose}/>
 
       <Styled.Modal1>
 
