@@ -6,16 +6,17 @@ import styled, {css, keyframes} from 'styled-components';
 
 export const NavBar = styled.div`
   width: 100%;
-  height: 60px;
-  border: 1px solid rgb(232, 233, 234);
+  height: 65px;
+  border-bottom: 1px solid rgb(232, 233, 234);
   display: flex;
   flex-direction: row;
+  align-items: center;
   position: relative;
   margin-bottom: 20px;
 `;
 
 export const LeftSideNavContainer = styled.div`
-  height: 100%;
+  height: 42px;
   display: flex;
   align-items: center;
 `;
@@ -25,11 +26,6 @@ export const Logo = styled.div`
   height: 20px;
   width: 70px;
   padding: 10px 20px;
-`;
-
-export const SearchContainer = styled.div`
-  height: 42px;
-  display: flex;
 `;
 
 export const SearchHouses = styled.input`
@@ -70,9 +66,10 @@ export const BuyDropDown = styled.button`
   border-radius: 8px;
   font-family: TruliaSansBold;
   background: white;
-  font-size: 15px;
+  font-size: 16px;
   margin-left: 4px;
   border: none;
+  color: rgb(59, 65, 68);
 
   &: hover {
     background-color: rgb(0, 120, 130);
@@ -86,28 +83,36 @@ export const RentDropDown = styled(BuyDropDown)``;
 export const MortgageDropDown = styled(BuyDropDown)``;
 
 export const RightSideNavContainer = styled.div`
-  border: 1px solid black;
-  height: 100%;
+  height: 42px;
   display: flex;
   align-items: center;
   position: absolute;
   right: 0;
 `;
 
-export const SavedHomes = styled.button`
-  padding: 5px;
+export const SavedHomes = styled(BuyDropDown)`
+  margin: 0 5px;
 `;
 
-export const SavedSearches = styled.button`
-  padding: 5px;
-`;
+export const SavedSearches = styled(SavedHomes)``;
 
-export const SignUpOrLogin = styled.button`
-  padding: 5px;
+export const SignUpOrLogin = styled(SavedHomes)`
+border: 1px solid rgb(205, 209, 212);
+
+&:hover {
+  background-color: rgb(205, 209, 212);
+}
 `;
 
 export const MainMenu = styled.button`
-  padding: 5px;
+  padding: 5px 10px;
+  background: white;
+  margin: 0 10px 0 5px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 // ******************** APP ******************** //

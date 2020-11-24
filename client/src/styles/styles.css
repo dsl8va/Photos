@@ -16,6 +16,11 @@ html, body {
   width: 24px;
 }
 
+.mainMenuIcon {
+  height: 24px;
+  width: 24px;
+}
+
 .icon {
   color: rgb(0, 120, 130);
   font-size: 20px;
