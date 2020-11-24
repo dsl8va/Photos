@@ -9,11 +9,6 @@ import NavBar from './NavBar.jsx';
 import * as Styled from '../styles/styles.js';
 import s from '../styles/styles.css';
 
-// ********** Style Components with Props ********** //
-const Image1 = styled.div`${Styled.Image1Style}`;
-const Image2 = styled.div`${Styled.Image2Style}`;
-const Image3 = styled.div`${Styled.Image3Style}`;
-
 // ********** App Component ********** //
 
 const App = () => {
@@ -54,12 +49,12 @@ const App = () => {
 
     <Styled.Container>
       <Styled.Grid onClick={() => setModal1IsOpen(true)}>
-        <Image1 photo={listing.photos ? listing.photos[0] : null}>
-        </Image1>
-        <Image2 photo={listing.photos ? listing.photos[2] : null}>
-        </Image2>
-        <Image3 photo={listing.photos ? listing.photos[listing.photos.length -1] : null}>
-        </Image3>
+        <Styled.Image1Style photo={listing.photos ? listing.photos[0] : null}>
+        </Styled.Image1Style>
+        <Styled.Image2Style photo={listing.photos ? listing.photos[2] : null}>
+        </Styled.Image2Style>
+        <Styled.Image3Style photo={listing.photos ? listing.photos[listing.photos.length -1] : null}>
+        </Styled.Image3Style>
       </Styled.Grid>
 
       <Styled.ForSale>FOR SALE</Styled.ForSale>

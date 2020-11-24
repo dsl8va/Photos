@@ -5,6 +5,7 @@ import {searchIcon, mainMenu} from '../utils/SVG.jsx';
 
 const NavBar = () => {
   return (
+    <>
     <Styled.NavBar>
 
       <Styled.LeftSideNavContainer>
@@ -25,6 +26,12 @@ const NavBar = () => {
       </Styled.RightSideNavContainer>
 
     </Styled.NavBar>
+
+    <Styled.SearchPath>
+
+    </Styled.SearchPath>
+
+    </>
   )
 }
 

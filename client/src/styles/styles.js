@@ -12,7 +12,6 @@ export const NavBar = styled.div`
   flex-direction: row;
   align-items: center;
   position: relative;
-  margin-bottom: 20px;
 `;
 
 export const LeftSideNavContainer = styled.div`
@@ -113,6 +112,15 @@ export const MainMenu = styled.button`
   &:hover {
     cursor: pointer;
   }
+`;
+
+// ********** Search Path ********** //
+
+export const SearchPath = styled.div`
+  border: 1px solid black;
+  width: 1000px;
+  height: 30px;
+  margin: 0 auto;
 `;
 
 // ******************** APP ******************** //
@@ -219,7 +227,7 @@ export const NumberOfPhotos = styled.div`
 
 // ********** Image 1 Photo ********** //
 
-export const Image1Style = css`
+export const Image1Style = styled.div`
   grid-row: 1 / 3;
   grid-column: 1 / 4;
   background-image: url(${props => props.photo});
@@ -229,7 +237,7 @@ export const Image1Style = css`
 
 // ********** Image 2 Photo ********** //
 
-export const Image2Style = css`
+export const Image2Style = styled.div`
   grid-row: 1;
   grid-column: 4;
   background-image: url(${props => props.photo});
@@ -239,7 +247,7 @@ export const Image2Style = css`
 
 // ********** Image 3 Photo ********** //
 
-export const Image3Style = css`
+export const Image3Style = styled.div`
   grid-row: 2;
   grid-column: 4;
   background-image: url(${props => props.photo});
