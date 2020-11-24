@@ -5,6 +5,7 @@ import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
 import FirstModal from './Modal1.jsx';
 import ImageCarousel from './Modal2.jsx';
+import NavBar from './NavBar.jsx';
 import * as Styled from '../styles/styles.js';
 import s from '../styles/styles.css';
 
@@ -48,6 +49,9 @@ const App = () => {
 
   return (
     <>
+
+    <NavBar />
+
     <Styled.Container>
       <Styled.Grid onClick={() => setModal1IsOpen(true)}>
         <Image1 photo={listing.photos ? listing.photos[0] : null}>

@@ -1,5 +1,75 @@
 import styled, {css, keyframes} from 'styled-components';
 
+// ******************** Nav Bar & Search Path ******************** //
+
+// ********** Nav Bar ********** //
+
+export const NavBar = styled.div`
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(232, 233, 234);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 20px;
+`;
+
+export const LeftSideNavContainer = styled.div`
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+export const Logo = styled.div`
+  display: inline-block;
+`;
+
+export const SearchHouses = styled.input`
+  width: 100px;
+`;
+
+export const SearchHousesButton = styled.button`
+  padding: 5px;
+`;
+
+export const BuyDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const RentDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const MortgageDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const RightSideNavContainer = styled.div`
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+`;
+
+export const SavedHomes = styled.button`
+  padding: 5px;
+`;
+
+export const SavedSearches = styled.button`
+  padding: 5px;
+`;
+
+export const SignUpOrLogin = styled.button`
+  padding: 5px;
+`;
+
+export const MainMenu = styled.button`
+  padding: 5px;
+`;
+
 // ******************** APP ******************** //
 
 // ********** Containers ********** //
