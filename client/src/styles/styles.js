@@ -1,4 +1,74 @@
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
+
+// ******************** Nav Bar & Search Path ******************** //
+
+// ********** Nav Bar ********** //
+
+export const NavBar = styled.div`
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(232, 233, 234);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 20px;
+`;
+
+export const LeftSideNavContainer = styled.div`
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+export const Logo = styled.div`
+  display: inline-block;
+`;
+
+export const SearchHouses = styled.input`
+  width: 100px;
+`;
+
+export const SearchHousesButton = styled.button`
+  padding: 5px;
+`;
+
+export const BuyDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const RentDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const MortgageDropDown = styled.button`
+  padding: 5px;
+`;
+
+export const RightSideNavContainer = styled.div`
+  border: 1px solid black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+`;
+
+export const SavedHomes = styled.button`
+  padding: 5px;
+`;
+
+export const SavedSearches = styled.button`
+  padding: 5px;
+`;
+
+export const SignUpOrLogin = styled.button`
+  padding: 5px;
+`;
+
+export const MainMenu = styled.button`
+  padding: 5px;
+`;
 
 // ******************** APP ******************** //
 
@@ -136,20 +206,44 @@ export const Image3Style = css`
 
 // ********** Modal Structure and Overlay ********** //
 
+const OpacityFrames = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+}
+`;
+
+const TransitionFrames = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(.5)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
 export const Modal1 = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: white;
+  top: 5%;
+  left: 5%;
   height: 90%;
   width: 90%;
   zIndex: 999;
   border-radius: 10px;
   display: grid;
-  grid-template: 60px 35px 1fr / 2fr 350px;
+  grid-template: 60px 35px 1fr / 1fr 350px;
   font-family: TruliaSansBold;
   color: rgb(59, 65, 68);
+
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: ${TransitionFrames};
 `;
 
 export const Overlay = styled.div`
@@ -160,6 +254,11 @@ export const Overlay = styled.div`
   bottom: 0;
   background: rgba(0, 0, 0, .7);
   zIndex: 999;
+
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: ${OpacityFrames};
 `;
 
 // ********** Tabs ********** //
@@ -168,7 +267,7 @@ export const Tabs = styled.div`
   grid-row: 1;
   grid-column: 1;
   height: 60px;
-  white-space: nowrap;s
+  white-space: nowrap;
   overflow-x: auto;
 `;
 
@@ -188,7 +287,7 @@ export const PhotosTab = styled.div`
 
 export const OtherTab = styled.div`
   padding: 10px 20px;
-  margin: 2px;
+  margin: 0 2px;
   display: inline-block;
   border-radius: 10px;
 
@@ -212,11 +311,13 @@ export const ModalSave = styled(Save)`
 
 export const ModalShare = styled(Share)`
   border: 1px solid rgb(232, 233, 234);
+  margin-right: 0px;
 `;
 
 export const CloseButton = styled.div`
   padding: 5px;
-  margin-right: 12px;
+  margin-left: 5px;
+  margin-right: 10px;
   display: inline-block;
 
   &:hover {
@@ -306,18 +407,18 @@ export const HouseImage10 = styled(HouseImage1)`
 export const Tours = styled.div`
   grid-row: 3;
   grid-column: 2;
-  overflow-y: auto;
   max-height: 100%;
+  overflow-y: auto;
 `;
 
 export const ToursContainer = styled.div`
   border: 1px solid rgb(232, 233, 234);
   border-radius: 10px;
   height: 560px;
-  width: 283px;
+  width: 285px;
   box-shadow: rgba(59, 65, 68, 0.18) 0px 17px 21px -1px;
   padding: 20px;
-  margin: 0px 5px 10px 5px;
+  margin: 0px 0px 15px 5px;
 `;
 
 export const TourHeader = styled.div`

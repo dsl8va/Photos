@@ -11,8 +11,7 @@
     "server-dev": "nodemon ./server/index.js",
     "seed": "node db/seed.js",
     "test": "jest",
-    "build": "webpack",
-    "start": "node ./server/index.js"
+    "production": "webpack && node server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.0",

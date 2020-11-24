@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import {FiHeart, FiShare} from 'react-icons/fi'
 import {FaRegImage} from 'react-icons/fa'
 import FirstModal from './Modal1.jsx';
+import ImageCarousel from './Modal2.jsx';
+import NavBar from './NavBar.jsx';
 import * as Styled from '../styles/styles.js';
 import s from '../styles/styles.css';
 
@@ -17,6 +19,7 @@ const Image3 = styled.div`${Styled.Image3Style}`;
 const App = () => {
   const [listing, setListing] = useState({});
   const [modal1IsOpen, setModal1IsOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState(null);
 
   useEffect(() => {
     fetchListing()
@@ -32,8 +35,23 @@ const App = () => {
       })
   }
 
+  const keyPress = useCallback(e => {
+    if (e.key === 'Escape' && modal1IsOpen) {
+      setModal1IsOpen(false);
+      setSelectedImg(null);
+    }
+  }, [setModal1IsOpen, modal1IsOpen, setSelectedImg]);
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    return () => document.removeEventListener('keydown', keyPress);
+  }, [keyPress]);
+
   return (
     <>
+
+    <NavBar />
+
     <Styled.Container>
       <Styled.Grid onClick={() => setModal1IsOpen(true)}>
         <Image1 photo={listing.photos ? listing.photos[0] : null}>
@@ -55,7 +73,10 @@ const App = () => {
 
     </Styled.Container>
 
-    <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing}/>
+    <FirstModal open={modal1IsOpen} onClose={() => setModal1IsOpen(false)} listing={listing} setSelectedImg={setSelectedImg}/>
+
+    <ImageCarousel selectedImg={selectedImg} onClose={() => setSelectedImg(false)} listing={listing} setSelectedImg={setSelectedImg}/>
+
     </>
   )
 }
