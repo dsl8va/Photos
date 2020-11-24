@@ -1,5 +1,7 @@
 import React from 'react';
 import * as Styled from '../styles/styles.js';
+import s from '../styles/styles.css';
+import {searchIcon} from '../utils/SVG.jsx';
 
 const NavBar = () => {
   return (
@@ -7,11 +9,14 @@ const NavBar = () => {
 
       <Styled.LeftSideNavContainer>
         <Styled.Logo></Styled.Logo>
-        <Styled.SearchHouses placeholder="Search"></Styled.SearchHouses>
-        <Styled.SearchHousesButton>O</Styled.SearchHousesButton>
+        <Styled.SearchContainer>
+          <Styled.SearchHouses placeholder="Search for City, Neighborhood, Zip, County, ..."></Styled.SearchHouses>
+          <Styled.SearchHousesButton>{searchIcon}</Styled.SearchHousesButton>
+
         <Styled.BuyDropDown>Buy</Styled.BuyDropDown>
         <Styled.RentDropDown>Rent</Styled.RentDropDown>
         <Styled.MortgageDropDown>Mortage</Styled.MortgageDropDown>
+        </Styled.SearchContainer>
       </Styled.LeftSideNavContainer>
 
       <Styled.RightSideNavContainer>

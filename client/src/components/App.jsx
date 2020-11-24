@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import {FiHeart, FiShare} from 'react-icons/fi'
-import {FaRegImage} from 'react-icons/fa'
+import {FiHeart, FiShare} from 'react-icons/fi';
+import {FaRegImage} from 'react-icons/fa';
 import FirstModal from './Modal1.jsx';
 import ImageCarousel from './Modal2.jsx';
 import NavBar from './NavBar.jsx';

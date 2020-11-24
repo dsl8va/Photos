@@ -15,7 +15,6 @@ export const NavBar = styled.div`
 `;
 
 export const LeftSideNavContainer = styled.div`
-  border: 1px solid black;
   height: 100%;
   display: flex;
   align-items: center;
@@ -28,14 +27,19 @@ export const Logo = styled.div`
   padding: 10px 20px;
 `;
 
+export const SearchContainer = styled.div`
+  height: 42px;
+  display: flex;
+`;
+
 export const SearchHouses = styled.input`
   width: 100px;
-  height: 35px;
-  width: 300px;
+  height: 100%;
+  width: 350px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   background: rgb(245, 246, 247);
-  border: transparent;
+  border: none;
   padding-left: 15px;
   font-size: 16px;
   font-family: TruliaSans;
@@ -43,20 +47,43 @@ export const SearchHouses = styled.input`
 `;
 
 export const SearchHousesButton = styled.button`
-  padding: 5px;
+  height: 105%;
+  padding: 14px 12px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgb(217, 60, 35);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(156, 17, 20);
+  }
 `;
 
 export const BuyDropDown = styled.button`
-  padding: 5px;
+  height: 105%;
+  padding: 0 15px;
+  border-radius: 8px;
+  font-family: TruliaSansBold;
+  background: white;
+  font-size: 15px;
+  margin-left: 4px;
+  border: none;
+
+  &: hover {
+    background-color: rgb(0, 120, 130);
+    color: white;
+    cursor: pointer;
+  }
 `;
 
-export const RentDropDown = styled.button`
-  padding: 5px;
-`;
+export const RentDropDown = styled(BuyDropDown)``;
 
-export const MortgageDropDown = styled.button`
-  padding: 5px;
-`;
+export const MortgageDropDown = styled(BuyDropDown)``;
 
 export const RightSideNavContainer = styled.div`
   border: 1px solid black;
