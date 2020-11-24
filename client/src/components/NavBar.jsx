@@ -6,7 +6,7 @@ const NavBar = () => {
     <Styled.NavBar>
 
       <Styled.LeftSideNavContainer>
-        <Styled.Logo>Trulia</Styled.Logo>
+        <Styled.Logo></Styled.Logo>
         <Styled.SearchHouses placeholder="Search"></Styled.SearchHouses>
         <Styled.SearchHousesButton>O</Styled.SearchHousesButton>
         <Styled.BuyDropDown>Buy</Styled.BuyDropDown>
@@ -20,6 +20,7 @@ const NavBar = () => {
         <Styled.SignUpOrLogin>Sign up or Log in</Styled.SignUpOrLogin>
         <Styled.MainMenu>III</Styled.MainMenu>
       </Styled.RightSideNavContainer>
+
     </Styled.NavBar>
   )
 }

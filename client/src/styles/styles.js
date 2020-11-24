@@ -22,11 +22,24 @@ export const LeftSideNavContainer = styled.div`
 `;
 
 export const Logo = styled.div`
-  display: inline-block;
+  content: url(https://fecphotos.s3-us-west-1.amazonaws.com/Trulia+Logo.png);
+  height: 20px;
+  width: 70px;
+  padding: 10px 20px;
 `;
 
 export const SearchHouses = styled.input`
   width: 100px;
+  height: 35px;
+  width: 300px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: rgb(245, 246, 247);
+  border: transparent;
+  padding-left: 15px;
+  font-size: 16px;
+  font-family: TruliaSans;
+  color: rgb(59, 65, 68);
 `;
 
 export const SearchHousesButton = styled.button`
