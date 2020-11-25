@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Styled from '../styles/styles.js';
 import s from '../styles/styles.css';
-import {searchIcon, mainMenu} from '../utils/SVG.jsx';
+import {searchIcon, mainMenu, backToSearchIcon, pathArrowIcon} from '../utils/SVG.jsx';
 
-const NavBar = () => {
+const NavBar = ({listing}) => {
   return (
     <>
     <Styled.NavBar>
@@ -27,9 +27,20 @@ const NavBar = () => {
 
     </Styled.NavBar>
 
-    <Styled.SearchPath>
-
-    </Styled.SearchPath>
+    <Styled.SearchPathContainer>
+      <Styled.BackToSearch>
+        {backToSearchIcon}Back To Search
+      </Styled.BackToSearch>
+      <Styled.PathContainer>
+        For Sale{pathArrowIcon}
+        <Styled.StatePath>CA</Styled.StatePath>
+        {pathArrowIcon}
+        <Styled.CityPath>San Ramon</Styled.CityPath>
+        {pathArrowIcon}
+        <Styled.ZipPath>94582</Styled.ZipPath>
+        {pathArrowIcon}{listing.address}
+      </Styled.PathContainer>
+    </Styled.SearchPathContainer>
 
     </>
   )

@@ -116,12 +116,35 @@ export const MainMenu = styled.button`
 
 // ********** Search Path ********** //
 
-export const SearchPath = styled.div`
-  border: 1px solid black;
+export const SearchPathContainer = styled.div`
   width: 1000px;
-  height: 30px;
+  height: 35px;
   margin: 0 auto;
+  display: flex;
 `;
+
+export const BackToSearch = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: TruliaSansBold;
+  font-size: 14px;
+  color: rgb(0, 120, 130);
+  margin-right: 40px;
+`;
+
+export const PathContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(134, 144, 153);
+`;
+
+export const StatePath = styled.span`
+  color: rgb(0, 120, 130);
+`;
+
+export const CityPath = styled(StatePath)``;
+export const ZipPath = styled(StatePath)``;
 
 // ******************** APP ******************** //
 

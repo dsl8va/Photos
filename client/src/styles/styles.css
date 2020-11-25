@@ -21,6 +21,16 @@ html, body {
   width: 24px;
 }
 
+.backToSearchIcon {
+  height: 22px;
+  width: 22px;
+}
+
+.pathArrowIcon {
+  height: 18px;
+  width: 18px;
+}
+
 .icon {
   color: rgb(0, 120, 130);
   font-size: 20px;

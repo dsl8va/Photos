@@ -5,7 +5,13 @@ import s from '../styles/styles.css'
 
 export const searchIcon = (<svg className={`${s.searchIcon}`} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M20.756 18.876l6.155 6.154-1.88 1.881-6.155-6.155A9.269 9.269 0 0 1 13.3 22.61a9.31 9.31 0 1 1 9.31-9.31c0 2.091-.69 4.021-1.854 5.576zM13.3 19.95a6.65 6.65 0 1 0 0-13.3 6.65 6.65 0 0 0 0 13.3z" fill="white"></path></svg>);
 
-export const mainMenu = (<svg class={`${s.mainMenuIcon}`} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.404 9.942v-2.66h21.142v2.66H5.404zm0 7.348v-2.66h21.142v2.66H5.404zm0 7.348v-2.66h21.142v2.66H5.404z" fill="rgb(0, 120, 130)"></path></svg>);
+export const mainMenu = (<svg className={`${s.mainMenuIcon}`} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M5.404 9.942v-2.66h21.142v2.66H5.404zm0 7.348v-2.66h21.142v2.66H5.404zm0 7.348v-2.66h21.142v2.66H5.404z" fill="rgb(0, 120, 130)"></path></svg>);
+
+// ********** Search Path Icons ********** //
+
+export const backToSearchIcon = (<svg className={`${s.backToSearchIcon}`} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.716 17.1l5.11 5.776-1.993 1.763-7.725-8.731 7.693-9.005 2.022 1.728-4.963 5.81h16.385v2.66H9.715z" fill="rgb(0, 120, 130)"></path></svg>);
+
+export const pathArrowIcon = (<svg className={`${s.pathArrowIcon}`} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M17.65 16.513l-7.147-7.055 1.868-1.893 9.068 8.951-9.069 8.927-1.866-1.896z" fill="#869099"></path></svg>);
 
 // ********** 1st Modal Icons ********** //
 

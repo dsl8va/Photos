@@ -45,7 +45,7 @@ const App = () => {
   return (
     <>
 
-    <NavBar />
+    <NavBar listing={listing}/>
 
     <Styled.Container>
       <Styled.Grid onClick={() => setModal1IsOpen(true)}>
