@@ -25,6 +25,9 @@ for (var i = 1; i <= 100; i++) {
   var options = {
     id: i,
     address: faker.address.streetAddress(),
+    state: faker.address.state(),
+    city: faker.address.city(),
+    zipCode: Math.floor(Math.random() * 90000) + 10000,
     price: Math.floor(faker.random.number({min: 300000, max: 1500000})/100000) * 100000,
     beds: faker.random.number({min: 2, max: 4}),
     baths: faker.random.number({min: 2, max: 3}),

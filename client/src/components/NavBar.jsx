@@ -33,11 +33,11 @@ const NavBar = ({listing}) => {
       </Styled.BackToSearch>
       <Styled.PathContainer>
         For Sale{pathArrowIcon}
-        <Styled.StatePath>CA</Styled.StatePath>
+        <Styled.StatePath>{listing.state}</Styled.StatePath>
         {pathArrowIcon}
-        <Styled.CityPath>San Ramon</Styled.CityPath>
+        <Styled.CityPath>{listing.city}</Styled.CityPath>
         {pathArrowIcon}
-        <Styled.ZipPath>94582</Styled.ZipPath>
+        <Styled.ZipPath>{listing.zipCode}</Styled.ZipPath>
         {pathArrowIcon}{listing.address}
       </Styled.PathContainer>
     </Styled.SearchPathContainer>

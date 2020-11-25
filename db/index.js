@@ -14,6 +14,9 @@ const ListingsSchema = new mongoose.Schema({
       unique: true
     },
     address: String,
+    state: String,
+    city: String,
+    zipCode: Number,
     price: Number,
     beds: Number,
     baths: Number,
