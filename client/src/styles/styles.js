@@ -6,69 +6,145 @@ import styled, {css, keyframes} from 'styled-components';
 
 export const NavBar = styled.div`
   width: 100%;
-  height: 60px;
-  border: 1px solid rgb(232, 233, 234);
+  height: 65px;
+  border-bottom: 1px solid rgb(232, 233, 234);
   display: flex;
   flex-direction: row;
+  align-items: center;
   position: relative;
-  margin-bottom: 20px;
 `;
 
 export const LeftSideNavContainer = styled.div`
-  border: 1px solid black;
-  height: 100%;
+  height: 42px;
   display: flex;
   align-items: center;
 `;
 
 export const Logo = styled.div`
-  display: inline-block;
+  content: url(https://fecphotos.s3-us-west-1.amazonaws.com/Trulia+Logo.png);
+  height: 20px;
+  width: 70px;
+  padding: 10px 20px;
 `;
 
 export const SearchHouses = styled.input`
   width: 100px;
+  height: 100%;
+  width: 350px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: rgb(245, 246, 247);
+  border: none;
+  padding-left: 15px;
+  font-size: 16px;
+  font-family: TruliaSans;
+  color: rgb(59, 65, 68);
 `;
 
 export const SearchHousesButton = styled.button`
-  padding: 5px;
+  height: 105%;
+  padding: 14px 12px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: rgb(217, 60, 35);
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(156, 17, 20);
+  }
 `;
 
 export const BuyDropDown = styled.button`
-  padding: 5px;
+  height: 105%;
+  padding: 0 15px;
+  border-radius: 8px;
+  font-family: TruliaSansBold;
+  background: white;
+  font-size: 16px;
+  margin-left: 4px;
+  border: none;
+  color: rgb(59, 65, 68);
+
+  &: hover {
+    background-color: rgb(0, 120, 130);
+    color: white;
+    cursor: pointer;
+  }
 `;
 
-export const RentDropDown = styled.button`
-  padding: 5px;
-`;
+export const RentDropDown = styled(BuyDropDown)``;
 
-export const MortgageDropDown = styled.button`
-  padding: 5px;
-`;
+export const MortgageDropDown = styled(BuyDropDown)``;
 
 export const RightSideNavContainer = styled.div`
-  border: 1px solid black;
-  height: 100%;
+  height: 42px;
   display: flex;
   align-items: center;
   position: absolute;
   right: 0;
 `;
 
-export const SavedHomes = styled.button`
-  padding: 5px;
+export const SavedHomes = styled(BuyDropDown)`
+  margin: 0 5px;
 `;
 
-export const SavedSearches = styled.button`
-  padding: 5px;
-`;
+export const SavedSearches = styled(SavedHomes)``;
 
-export const SignUpOrLogin = styled.button`
-  padding: 5px;
+export const SignUpOrLogin = styled(SavedHomes)`
+border: 1px solid rgb(205, 209, 212);
+
+&:hover {
+  background-color: rgb(205, 209, 212);
+}
 `;
 
 export const MainMenu = styled.button`
-  padding: 5px;
+  padding: 5px 10px;
+  background: white;
+  margin: 0 10px 0 5px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
+
+// ********** Search Path ********** //
+
+export const SearchPathContainer = styled.div`
+  width: 1000px;
+  height: 35px;
+  margin: 0 auto;
+  display: flex;
+`;
+
+export const BackToSearch = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: TruliaSansBold;
+  font-size: 14px;
+  color: rgb(0, 120, 130);
+  margin-right: 40px;
+`;
+
+export const PathContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgb(134, 144, 153);
+`;
+
+export const StatePath = styled.span`
+  color: rgb(0, 120, 130);
+`;
+
+export const CityPath = styled(StatePath)``;
+export const ZipPath = styled(StatePath)``;
 
 // ******************** APP ******************** //
 
@@ -174,7 +250,7 @@ export const NumberOfPhotos = styled.div`
 
 // ********** Image 1 Photo ********** //
 
-export const Image1Style = css`
+export const Image1Style = styled.div`
   grid-row: 1 / 3;
   grid-column: 1 / 4;
   background-image: url(${props => props.photo});
@@ -184,7 +260,7 @@ export const Image1Style = css`
 
 // ********** Image 2 Photo ********** //
 
-export const Image2Style = css`
+export const Image2Style = styled.div`
   grid-row: 1;
   grid-column: 4;
   background-image: url(${props => props.photo});
@@ -194,7 +270,7 @@ export const Image2Style = css`
 
 // ********** Image 3 Photo ********** //
 
-export const Image3Style = css`
+export const Image3Style = styled.div`
   grid-row: 2;
   grid-column: 4;
   background-image: url(${props => props.photo});

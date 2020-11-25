@@ -25,7 +25,7 @@ const ImageCarousel = ({selectedImg, onClose, listing, setSelectedImg}) => {
       <Styled.ImageDisplay>
 
         <Styled.CarouselHouseInfo>
-        {`${listing.address} | $${listing.price} | ${listing.beds} Beds ${listing.baths} Baths`}
+        {`${listing.address} | $${listing.price.toLocaleString('en')} | ${listing.beds} Beds ${listing.baths} Baths`}
         </Styled.CarouselHouseInfo>
 
         <Styled.Modal2Buttons>
