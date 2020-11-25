@@ -20,7 +20,8 @@ const App = () => {
     fetchListing()
   }, []);
 
-  var fetchListing = (id = 1) => {
+  var fetchListing = () => {
+    var id = Math.floor(Math.random() * 100);
     axios.get(`/api/listings/${id}`)
       .then(newListing => {
         setListing(newListing.data);
