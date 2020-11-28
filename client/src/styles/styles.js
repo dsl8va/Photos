@@ -425,7 +425,7 @@ export const HousePictures = styled.div`
   grid-row: 3;
   grid-column: 1;
   display: grid;
-  grid-template: 300px 200px 400px 200px 400px / repeat(6, 1fr);
+  grid-template: 60% 40% 100% 40% 100% / repeat(6, 1fr);
   overflow-y: auto;
   gap: 7px;
 `;
