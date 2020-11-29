@@ -21,14 +21,14 @@
 
 ### Installation
 1. Clone repo
-``sh
+```sh
 git clone https://github.com/HRR49HouseStark/Photos.git
-``
+```
 
 2. Install Packages
-``sh
+```sh
 npm install
-``
+```
 
 ## Contact
 David Kim - davidhk21@gmail.com
