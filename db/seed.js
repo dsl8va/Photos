@@ -2,6 +2,7 @@ const {Listings, db} = require('./index.js');
 const faker = require('faker');
 const data = require('./photoData.js');
 
+// get photos randomly without getting duplicates
 var getRandomPhotos = (array, numOfPhotos) => {
   var randomPhotos = [];
   while (numOfPhotos > 0) {

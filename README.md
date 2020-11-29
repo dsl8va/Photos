@@ -1,38 +1,35 @@
-# Project Name
+# Photo Gallery/Carousel
 
-> A recreation of the Trulia listing photo gallery/carousel
+## About The Project
 
-## Related Projects
-
-  - https://github.com/hrr49-fec07-stark/Description-module
-  - https://github.com/hrr49-fec07-stark/tours
-  - https://github.com/hrr49-fec07-stark/similar-homes
+> A recreation of the Trulia listing photo gallery/carousel Component.
+1. Visit http://54.219.143.193:3001/ to take a look at the individual component!
+1. Visit http://54.177.124.31:3000/ to take a look at the whole listing page with its related projects!
 
 ## Table of Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+* [About The Project](#about-the-project)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [License](#license)
+* [Contact](#contact)
 
-## Usage
+## Getting Started
 
-> Some usage instructions
+### Prerequisites
+* npm
 
-## Requirements
+### Installation
+1. Clone repo
+``sh
+git clone https://github.com/HRR49HouseStark/Photos.git
+``
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
+2. Install Packages
+``sh
 npm install
-```
+``
 
+## Contact
+David Kim - davidhk21@gmail.com

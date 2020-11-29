@@ -1,0 +1,70 @@
+This information is for AWS Linux 2 - reference info!
+
+When updating the deployed app:
+  - Build the webpack
+OR
+  - pm2 start "npm run production" --name myAppName
+    - edit script with correct App Name to build and run the app
+
+To connect to the EC2 instance and use Linux command line, run this in the command line:
+
+bash login.sh
+
+// ---------- Initialize Web Server ---------- //
+
+INSTALLING NODE:
+resources:
+  - https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+
+Install node version manager (nvm):
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+Activate nvm:
+. ~/.nvm/nvm.sh
+
+Use nvm to install node:
+nvm install node
+nvm install 14
+nvm alias default 14
+  - (these are to use version 14 by default, which is stable.)
+
+INSTALLING MONGO:
+resources:
+  - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-amazon/
+  - https://devopsmyway.com/install-mongodb-on-ec2/
+
+To install the latest stable version of MongoDB:
+sudo yum install -y mongodb-org
+
+Start the MongoDB process:
+sudo systemctl start mongod
+
+You can verify that the MongoDB process has started successfully:
+sudo systemctl status mongod
+
+To stop the MongoDB process:
+sudo systemctl stop mongod
+
+To restart the MongoDB process:
+sudo systemctl restart mongod
+
+Begin using MongoDB:
+mongo
+
+USING PM2 TO MAKE WEB SERVER RUN INDEFINITELY:
+1. npm install -g pm2
+2. pm2 start ENTRYPOINT.js --name NAMEOFAPP
+  OR
+   pm2 start "npm run SCRIPT" --name NAMEOFAPP
+3. pm2 save
+4. pm2 startup
+  - this will give you a long sudo command
+  - copy/paste and run in the terminal to set startup script!
+
+Useful pm2 commands:
+  - pm2 list
+    - Shows all running apps
+  - pm2 stop NAME
+    - Stops an app with its given NAME
+  - pm2 restart NAME
+    - restarts an app with its NAME. Can also restart ALL
