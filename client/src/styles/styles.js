@@ -309,7 +309,7 @@ export const Modal1 = styled.div`
   left: 5%;
   height: 90%;
   width: 90%;
-  zIndex: 999;
+  z-index: 999;
   border-radius: 10px;
   display: grid;
   grid-template: 60px 35px 1fr / 1fr 350px;
@@ -329,7 +329,7 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, .7);
-  zIndex: 999;
+  z-index: 999;
 
   animation-duration: 400ms;
   animation-iteration-count: 1;
@@ -701,7 +701,7 @@ export const ImageDisplay = styled.div`
   background: rgba(0, 0, 0, .7);
   height: 100%;
   width: 100%;
-  zIndex: 1000;
+  z-index: 1000;
   font-family: TruliaSansBold;
 `;
 
