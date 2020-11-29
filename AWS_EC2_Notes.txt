@@ -1,5 +1,14 @@
 This information is for AWS Linux 2 - reference info!
 
+To update deployed app:
+Make sure final changes are on the main branch
+  - add, commit, push changes to main branch or if working on a separate branch, merge changes to main
+git pull from within EC2 instance
+  - make sure pm2 list shows your online app
+  - if not, check sudo su mode
+the deployed app will automatically update!
+
+
 When updating the deployed app:
   - Build the webpack
 OR
