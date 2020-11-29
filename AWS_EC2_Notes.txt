@@ -8,13 +8,6 @@ git pull from within EC2 instance
   - if not, check sudo su mode
 the deployed app will automatically update!
 
-
-When updating the deployed app:
-  - Build the webpack
-OR
-  - pm2 start "npm run production" --name myAppName
-    - edit script with correct App Name to build and run the app
-
 To connect to the EC2 instance and use Linux command line, run this in the command line:
 
 bash login.sh
